@@ -1,2 +1,2 @@
 # dotfiles
-Editable text files for configuring various programs for any *nix system.
+Editable text files for configuring various programs on *nix systems.
