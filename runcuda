@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+nvcc -allow-unsupported-compiler $1 -o temp
+
+chmod +x temp # if it isn't already executable
+
+./temp
