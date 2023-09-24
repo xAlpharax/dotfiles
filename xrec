@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+recordingPATH=~/media/screenrecords/
+
+case $1 in
+
+    start)
+        ffmpeg -video_size 1920x1080 -framerate 60 -f x11grab -i :0.0+0,0 ${recordingPATH}screenrecording_$(($(ls $recordingPATH | wc -l)+1)).mp4 ;;
+
+    stop)
+        pkill ffmpeg ;;
+
+esac

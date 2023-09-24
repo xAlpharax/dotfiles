@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+screenshotPATH=~/media/screenshots/
+
+cd $screenshotPATH
+
+case $1 in
+
+    full)
+        scrot -z -q 100 "%Y-%m-%d %H:%M:%S.png" ;;
+
+    area)
+        scrot -z -q 100 -s "%Y-%m-%d %H:%M:%S.png" ;; # -f --freeze
+
+esac

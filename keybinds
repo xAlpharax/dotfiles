@@ -9,13 +9,13 @@ alt + shift + t
 # xshot and clip for Screenshots
 
 alt + control + Print
-    xshot ss full
+    xshot full
 
 alt + Print
     clip full
 
 alt + control + s
-    xshot ss area
+    xshot area
 
 alt + shift + s
     clip area
@@ -23,10 +23,10 @@ alt + shift + s
 # xshot for Recordings
 
 alt + shift + r
-    xshot rec start
+    xrec start
 
 alt + shift + e
-    xshot rec stop
+    xrec stop
 
 # xsecurelock
 
