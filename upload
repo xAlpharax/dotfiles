@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+if [ "$1" = "" ];then echo "No args"; exit; fi
+
+TO_UPLOAD_FILE="$1"
+
+RETURN_LINK=$(curl -F "file=@$TO_UPLOAD_FILE" https://0x0.st)
+
+echo $RETURN_LINK | xsel -b
+echo $RETURN_LINK

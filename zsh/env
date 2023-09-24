@@ -1,0 +1,56 @@
+#!/bin/sh
+
+### ENVIRONMENT VARIABLES ###
+
+### apps to open stuff ###
+
+export EDITOR=nvim
+export BROWSER=brave
+
+##################
+
+### gpg ###
+export GPG_TTY=$(tty)
+
+### dotnet disable telemetry ###
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+### dbus stuff ###
+export NO_AT_BRIDGE=1
+
+### paths ###
+export PATH=/bin:/sbin/:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/alphara/.local/bin:/home/alphara/exfatssd/IEUCYS/flutter2/bin
+
+### XDG ###
+export XDG_CONFIG_HOME=/home/alphara/.config
+
+### steam ###
+export STEAM_COMPAT_DATA_PATH=~/.local/share/Steam/steamapps/compatdata
+export STEAM_COMPAT_CLIENT_INSTALL_PATH=~/.local/share/Steam/
+
+### gaming stuff ###
+#export mesa_glthread=true # AMD OPENGL shader caching
+export RADV_PERFTEST=aco # AMD faster shader compiler by Valve
+
+export __GL_THREADED_OPTIMIZATION=1 # NVIDIA OPENGL
+export __GL_SHADER_DISK_CACHE=1 # to enable shader cache
+
+### ray tracing support and nvidia stuff ###
+export PROTON_HIDE_NVIDIA_GPU=0
+export PROTON_ENABLE_NVAPI=1
+export VKD3D_CONFIG=dxr,dxr11
+#export PROTON_ENABLE_NGX_UPDATER=1
+
+### QT and GTK ###
+export GTK_THEME=Arc:dark
+export GTK2_RC_FILES=/usr/share/themes/Arc-Dark/gtk-2.0/gtkrc
+export QT_STYLE_OVERRIDE=adwaita-dark
+
+### pipewire ###
+# export PIPEWIRE_LATENCY=256/48000 # IF NEEDED 16/48000 ~ 0.33 ms latency
+
+### cuda & ML ###
+export PATH=$PATH:/usr/local/cuda-11.7/bin
+export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:/usr/local/cuda-11.7/lib64
+
+TORCH_CUDA_ARCH_LIST="8.6"

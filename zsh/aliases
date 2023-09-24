@@ -1,0 +1,58 @@
+#!/bin/sh
+
+## # zsh / aliases # ##
+
+alias ls='ls --color=auto'
+
+# shorthands
+alias ll='ls -lGh'
+alias la='ls -lGAh'
+alias lf='ranger'
+alias du='du -sh'
+alias df='df -h'
+alias cl='clear'
+
+alias am='alsamixer --card 0'
+alias x='cd ~ ; startx'
+alias v='nvim'
+
+# secure shells
+alias spi='ssh -X pi@192.168.0.130'
+
+# directories
+configdir=$HOME/.config
+alias cds='cd $configdir/suckless/'
+alias zal='vim $configdir/zsh/aliases'
+alias zrc='vim $configdir/zsh/zshrc'
+alias zen='vim $configdir/zsh/env'
+
+# packages
+alias xbpi='sudo xbps-install'
+alias xbpr='sudo xbps-remove'
+alias xbpq='xbps-query -Rs'
+
+# scripts
+scriptdir=$HOME/.scripts
+alias rgbhex='python $scriptdir/rgbhex.py'
+alias sched='python $scriptdir/sched.py'
+alias vis='python $scriptdir/vis.py'
+
+# aesthetic
+alias filmelematrix='cmatrix -C red -a'
+alias colorfetch='neofetch --block_range 0 15'
+alias change-bg='feh --bg-fill --no-fehbg'
+alias clock='tty-clock -Dc -C 4'
+alias sens='watch -n 0.1 sensors'
+alias htopr='htop -C -U'
+alias sxiv='sxiv -bpqra'
+
+# tools
+alias newsboat='newsboat -C ~/.config/newsboat/newsboat.conf -c ~/.config/newsboat/cache.db -u ~/.config/newsboat/urls'
+alias proton='~/.local/share/Steam/steamapps/common/Proton\ -\ Experimental/proton run'
+alias ytdlpa='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3'
+alias ytdlp='yt-dlp'
+
+# envycontrol for nvidia optimus
+alias dedicated='sudo envycontrol -s nvidia --coolbits 28 --verbose' # --force-comp
+alias hybrid='sudo envycontrol -s hybrid --rtd3 3 --verbose'
+alias integrated='sudo envycontrol -s integrated --verbose'

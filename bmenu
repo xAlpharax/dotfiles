@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+backgrounds=/home/$USER/.config/backgrounds
+config=$(bash ~/.config/dmenu.conf)
+
+n_files=$(($(ls -l $backgrounds | wc -l) - 1))
+
+# Use dmenu to prompt the user to select a file
+selected_file=$(find $backgrounds -maxdepth 1 -type f -printf '%f\n' | $config -i -l $n_files)
+
+# If the user selected a file, execute it
+if [ -n "$selected_file" ]; then
+    feh --bg-fill --no-fehbg "${backgrounds}/${selected_file}"
+fi

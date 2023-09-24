@@ -1,0 +1,24 @@
+zstyle ':completion:*' menu select
+zstyle :compinstall filename '/home/alphara/.zshrc'
+
+HISTFILE=~/.histfile
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+setopt extendedglob
+unsetopt beep
+
+bindkey -v
+
+source $HOME/.config/zsh/aliases
+source $HOME/.config/zsh/env
+
+autoload -Uz compinit
+zmodload zsh/complist
+
+PROMPT='%B%F{3}%n@%m %~>%b%f '
+autoload -Uz promptinit
+PROMPT_EOL_MARK=""
+
+promptinit
+compinit

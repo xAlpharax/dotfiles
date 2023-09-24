@@ -1,0 +1,41 @@
+! .Xresources
+
+Xcursor.theme: SpaceKCursors
+
+! special
+*.foreground:   #d9d6e3
+*.background:   #0f0a1c
+
+*.cursorColor:  #d9d5e6
+
+! black
+*.color0:       #828ff9
+*.color8:       #828ff9
+
+! red
+*.color1:       #655395
+*.color9:       #655395
+
+! green
+*.color2:       #828ff9
+*.color10:      #828ff9
+
+! yellow
+*.color3:       #ac96dc
+*.color11:      #ac96dc
+
+! blue
+*.color4:       #e94c80
+*.color12:      #e94c80
+
+! magenta
+*.color5:       #ace6f0
+*.color13:      #ace6f0
+
+! cyan
+*.color6:       #655395
+*.color14:      #655395
+
+! white
+*.color7:       #eebea4
+*.color15:      #ace6f0

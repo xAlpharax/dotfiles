@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+config=$(bash ~/.config/dmenu.conf)
+
+doVAR=$(echo -e "dwmkill\npicomkill\nsleeeeeeep\nrebooooooot\npoweroff" | $config -i -l 5 )
+
+case $doVAR in
+    "");;
+    "dwmkill")
+        pkill xinit;;
+    "picomkill")
+        pkill picom;;
+    "sleeeeeeep")
+        sudo zzz;;
+    "rebooooooot")
+        sudo reboot;;
+    "poweroff")
+        sudo poweroff;;
+esac

@@ -1,0 +1,54 @@
+#!/bin/sh
+
+#                  #
+# ## ~/.xinitrc ## #
+#                  #
+
+xrandr -s 1920x1080 -r 144 &        # target screen resolution
+xset r rate 300 30 &                # key repeat delay and speed
+
+xrdb merge ~/.Xresources            # resources
+picom &                             # compositor
+
+#                  #
+# ## more stuff ## #
+#                  #
+
+feh --bg-fill --no-fehbg ~/.config/backgrounds/darkflowers.jpg &        # wallpaper
+
+synclient ClickPad=1                                                    # buttonless pad
+
+synclient VertTwoFingerScroll=1                                         # enable vert scroll
+synclient HorizTwoFingerScroll=1                                        # enable horiz scroll
+
+synclient EmulateTwoFingerMinZ=300                                      # precision of scroll
+synclient EmulateTwoFingerMinW=300                                      # precision of scroll
+
+synclient PalmDetect=1                                                  # palm rejection
+synclient PalmMinWidth=10                                               # size parameter
+synclient PalmMinZ=200                                                  # pressure param
+
+synclient VertScrollDelta=-200                                          # natural vert
+synclient HorizScrollDelta=-200                                         # natural horiz
+
+synclient CornerCoasting=0                                              # eliminate coasting
+synclient CoastingSpeed=0                                               # eliminate coasting
+
+synclient TapButton1=1 TapButton2=3 ClickFinger3=0                      # tap to click
+synclient MinSpeed=1.25 MaxSpeed=2.5                                    # pointer speed
+synclient AccelFactor=0.025                                             # acceleration
+
+amixer --card 0 set 'Master' 100 &
+amixer --card 0 set 'Capture' 39 &
+
+sxhkd -c $HOME/.config/keybinds &                                       # keybindings
+
+eval $(dbus-dbus-launch --sh-syntax --exit-with-x11)                    # dbus session
+dbus-run-session pipewire &
+
+exec slstatus &                                                         # statusbar
+
+while :;
+do
+    ssh-agent dwm
+done
