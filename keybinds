@@ -1,0 +1,56 @@
+# screenkey for Typing
+
+alt + t
+    screenkey -s small -t 1 -f inconsolata --opacity 0.7
+
+alt + shift + t
+    pkill screenkey
+
+# xshot and clip for Screenshots
+
+alt + control + Print
+    xshot ss full
+
+alt + Print
+    clip full
+
+alt + control + s
+    xshot ss area
+
+alt + shift + s
+    clip area
+
+# xshot for Recordings
+
+alt + shift + r
+    xshot rec start
+
+alt + shift + e
+    xshot rec stop
+
+# xsecurelock
+
+alt + shift + BackSpace
+    pkill picom; \
+    env \
+    XSECURELOCK_PASSWORD_PROMPT=time_hex \
+    XSECURELOCK_FONT="inconsolata:size=17" \
+    XSECURELOCK_DATETIME_FORMAT="</%B %d> <%H:%M>" \
+    XSECURELOCK_SHOW_DATETIME=1 \
+    xsecurelock
+
+# brightness trick
+
+XF86MonBrightnessDown
+    sudo backlight 0
+
+XF86MonBrightnessUp
+    sudo backlight 255
+
+# volume
+XF86Audio{Raise,Lower}Volume
+    amixer --card 0 set Master 1%{+,-}
+
+# mute audio out
+XF86AudioMute
+    [ $(amixer --card 0 get Master | tail -n 1 | sed -E 's/.*.\[//g' | cut -c1-2) = "on" ] && amixer --card 0 set Master mute || amixer --card 0 set Master unmute

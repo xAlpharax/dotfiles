@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+if [ $1 == "min" ] ; then
+    nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=0"
+fi
+
+if [ $1 == "max" ] ; then
+    nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=1"
+fi
+
+if [ $1 == "auto" ] ; then
+    nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=2"
+fi
+
+nvidia-settings -q GpuPowerMizerMode
