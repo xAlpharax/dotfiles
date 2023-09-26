@@ -2,7 +2,7 @@
 
 set -e
 
-if [ "$1" = "" ];then echo "No args"; exit; fi
+if [ "$1" = "" ]; then echo "No args"; exit; fi
 
 TO_UPLOAD_FILE="$1"
 

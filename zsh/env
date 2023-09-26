@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ### ENVIRONMENT VARIABLES ###
 
@@ -6,8 +6,6 @@
 
 export EDITOR=nvim
 export BROWSER=brave
-
-##################
 
 ### gpg ###
 export GPG_TTY=$(tty)
@@ -19,7 +17,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export NO_AT_BRIDGE=1
 
 ### paths ###
-export PATH=/bin:/sbin/:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/alphara/.local/bin:/home/alphara/exfatssd/IEUCYS/flutter2/bin
+export PATH=/bin:/sbin/:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/alphara/.local/bin:/home/alphara/exfatssd/IEUCYS/flutter/bin:/usr/local/go/bin
 
 ### XDG ###
 export XDG_CONFIG_HOME=/home/alphara/.config

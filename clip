@@ -7,15 +7,13 @@ case $1 in
     full)
         scrot -z -q 100 "/tmp/imgclip.png"
         xclip -selection clipboard -t image/png -i "/tmp/imgclip.png"
-        rm "/tmp/imgclip.png"
         ;;
 
     area)
         scrot -z -q 100 -s "/tmp/imgclip.png" # -f --freeze
         xclip -selection clipboard -t image/png -i "/tmp/imgclip.png"
-        rm "/tmp/imgclip.png"
         ;;
 
 esac
 
-rm "/tmp/imgclip*"
+cd /tmp ; ls | grep imgclip | xargs -d"\n" rm
