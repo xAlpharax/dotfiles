@@ -16,6 +16,8 @@ alias am='alsamixer --card 0'
 alias x='cd ~ ; startx'
 alias v='nvim'
 
+alias fzf='sk'
+
 # secure shells
 alias spi='ssh -X pi@192.168.0.130'
 

@@ -4,8 +4,11 @@
 
 ### apps to open stuff ###
 
-export EDITOR=nvim
-export BROWSER=brave
+export EDITOR="nvim"
+export BROWSER="brave"
+export TERM="st"
+
+export BAT_THEME="base16"
 
 ### gpg ###
 export GPG_TTY=$(tty)
@@ -40,6 +43,9 @@ export VKD3D_CONFIG=dxr,dxr11
 #export PROTON_ENABLE_NGX_UPDATER=1
 
 ### QT and GTK ###
+
+# export QT_QPA_PLATFORMTHEME=qt5ct
+
 export GTK_THEME=Arc:dark
 export GTK2_RC_FILES=/usr/share/themes/Arc-Dark/gtk-2.0/gtkrc
 export QT_STYLE_OVERRIDE=adwaita-dark

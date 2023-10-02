@@ -1,4 +1,4 @@
-# screenkey for Typing
+# Screenkey for Typing
 
 alt + t
     screenkey -s small -t 1 -f inconsolata --opacity 0.7
@@ -6,9 +6,9 @@ alt + t
 alt + shift + t
     pkill screenkey
 
-# xshot and clip for Screenshots
+# Screen Shots
 
-alt + control + Print
+control + Print
     xshot full
 
 alt + Print
@@ -20,13 +20,18 @@ alt + control + s
 alt + shift + s
     clip area
 
-# xshot for Recordings
+# Screen Recordings
 
 alt + shift + r
     xrec start
 
 alt + shift + e
     xrec stop
+
+# X11 Color Picker
+
+alt + c
+    color-picker
 
 # xsecurelock
 
