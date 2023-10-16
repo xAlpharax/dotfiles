@@ -6,6 +6,7 @@
 
 export EDITOR="nvim"
 export BROWSER="brave"
+export CHROME_EXECUTABLE="chromium"
 export TERM="st"
 
 export BAT_THEME="base16"
