@@ -381,7 +381,8 @@
             "groups": true,
             "servers": true,
             "friends": true,
-            "friendRequestCancels": true
+            "friendRequestCancels": true,
+            "notices": false
         },
         "RevealAllSpoilers": {
             "enabled": true
@@ -502,7 +503,8 @@
         },
         "UserVoiceShow": {
             "enabled": true,
-            "showInUserProfileModal": true
+            "showInUserProfileModal": true,
+            "showVoiceChannelSectionHeader": true
         },
         "USRBG": {
             "enabled": true,
@@ -592,6 +594,9 @@
         },
         "ThemeAttributes": {
             "enabled": true
+        },
+        "NoTypingAnimation": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -604,6 +609,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1697289264290
+        "settingsSyncVersion": 1697824463047
     }
 }
