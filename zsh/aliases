@@ -18,9 +18,6 @@ alias v='nvim'
 
 alias fzf='sk'
 
-# flatpaks
-alias spotube='dbus-run-session flatpak run com.github.KRTirtho.Spotube'
-
 # secure shells
 alias spi='ssh -X pi@192.168.0.130'
 
