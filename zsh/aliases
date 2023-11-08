@@ -51,6 +51,7 @@ alias sxiv='sxiv -bpqra'
 # tools
 alias newsboat='newsboat -C ~/.config/newsboat/newsboat.conf -c ~/.config/newsboat/cache.db -u ~/.config/newsboat/urls'
 alias proton='~/.local/share/Steam/steamapps/common/Proton\ -\ Experimental/proton run'
+alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton8-21/proton run'
 alias ytdlpa='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3'
 alias ytdlp='yt-dlp'
 

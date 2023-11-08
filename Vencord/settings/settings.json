@@ -108,7 +108,7 @@
             "enabled": true
         },
         "ColorSighted": {
-            "enabled": false
+            "enabled": true
         },
         "ConsoleShortcuts": {
             "enabled": true
@@ -207,16 +207,18 @@
             "hideWithSpotify": true,
             "statusName": "some music",
             "useListeningStatus": false,
-            "missingArt": "lastfmLogo"
+            "missingArt": "lastfmLogo",
+            "nameFormat": "status-name"
         },
         "LoadingQuotes": {
-            "enabled": true
+            "enabled": true,
+            "replaceEvents": true
         },
         "MemberCount": {
             "enabled": true
         },
         "MessageClickActions": {
-            "enabled": false,
+            "enabled": true,
             "enableDeleteOnClick": true,
             "enableDoubleClickToEdit": true,
             "enableDoubleClickToReply": true,
@@ -303,7 +305,10 @@
             "enabled": true
         },
         "NoPendingCount": {
-            "enabled": false
+            "enabled": true,
+            "hideFriendRequestsCount": true,
+            "hideMessageRequestsCount": true,
+            "hidePremiumOffersCount": true
         },
         "NoProfileThemes": {
             "enabled": false
@@ -336,7 +341,7 @@
             "epic": false
         },
         "Party mode 🎉": {
-            "enabled": false,
+            "enabled": true,
             "superIntensePartyMode": 0
         },
         "PermissionsViewer": {
@@ -361,7 +366,12 @@
             "messages": true
         },
         "PronounDB": {
-            "enabled": false
+            "enabled": false,
+            "pronounsFormat": "LOWERCASE",
+            "pronounSource": 0,
+            "showSelf": true,
+            "showInMessages": true,
+            "showInProfile": true
         },
         "QuickMention": {
             "enabled": true
@@ -411,7 +421,7 @@
             "enabled": false
         },
         "ServerListIndicators": {
-            "enabled": false,
+            "enabled": true,
             "mode": 2
         },
         "ShikiCodeblocks": {
@@ -496,7 +506,7 @@
             "enabled": false
         },
         "UnsuppressEmbeds": {
-            "enabled": false
+            "enabled": true
         },
         "UrbanDictionary": {
             "enabled": true
@@ -566,7 +576,7 @@
             "enabled": true
         },
         "NormalizeMessageLinks": {
-            "enabled": false
+            "enabled": true
         },
         "PreviewMessage": {
             "enabled": true
@@ -575,13 +585,17 @@
             "enabled": true
         },
         "NoMosaic": {
-            "enabled": true
+            "enabled": true,
+            "inlineVideo": true,
+            "mediaLayoutType": "STATIC"
         },
         "OnePingPerDM": {
             "enabled": false
         },
         "PermissionFreeWill": {
-            "enabled": false
+            "enabled": false,
+            "lockout": true,
+            "onboarding": true
         },
         "PictureInPicture": {
             "enabled": true
@@ -609,6 +623,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1697824463047
+        "settingsSyncVersion": 1699431045702
     }
 }
