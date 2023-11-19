@@ -44,6 +44,8 @@ set clipboard+=unnamedplus
     Plug 'preservim/nerdtree'
     Plug 'vimsence/vimsence'
 
+    Plug 'github/copilot.vim'
+
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     call plug#end()

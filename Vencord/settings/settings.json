@@ -108,7 +108,7 @@
             "enabled": true
         },
         "ColorSighted": {
-            "enabled": true
+            "enabled": false
         },
         "ConsoleShortcuts": {
             "enabled": true
@@ -218,7 +218,7 @@
             "enabled": true
         },
         "MessageClickActions": {
-            "enabled": true,
+            "enabled": false,
             "enableDeleteOnClick": true,
             "enableDoubleClickToEdit": true,
             "enableDoubleClickToReply": true,
@@ -611,6 +611,9 @@
         },
         "NoTypingAnimation": {
             "enabled": false
+        },
+        "SuperReactionTweaks": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -623,6 +626,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1699431045702
+        "settingsSyncVersion": 1699799026302
     }
 }
