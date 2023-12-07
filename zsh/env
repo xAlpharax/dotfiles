@@ -34,8 +34,8 @@ export STEAM_COMPAT_CLIENT_INSTALL_PATH=~/.local/share/Steam/
 #export mesa_glthread=true # AMD OPENGL shader caching
 export RADV_PERFTEST=aco # AMD faster shader compiler by Valve
 
-export __GL_THREADED_OPTIMIZATION=1 # NVIDIA OPENGL
-export __GL_SHADER_DISK_CACHE=1 # to enable shader cache
+#export __GL_THREADED_OPTIMIZATION=1 # NVIDIA OPENGL
+#export __GL_SHADER_DISK_CACHE=1 # to enable shader cache
 
 ### ray tracing support and nvidia stuff ###
 export PROTON_HIDE_NVIDIA_GPU=0
@@ -52,7 +52,7 @@ export GTK2_RC_FILES=/usr/share/themes/Arc-Dark/gtk-2.0/gtkrc
 export QT_STYLE_OVERRIDE=adwaita-dark
 
 ### pipewire ###
-# export PIPEWIRE_LATENCY=256/48000 # IF NEEDED 16/48000 ~ 0.33 ms latency
+export PIPEWIRE_LATENCY=480/48000 # IF NEEDED 16/48000 ~ 0.33 ms latency
 
 ### cuda & ML ###
 export PATH=$PATH:/usr/local/cuda-11.7/bin

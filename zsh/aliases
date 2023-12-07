@@ -51,11 +51,12 @@ alias sxiv='sxiv -bpqra'
 # tools
 alias newsboat='newsboat -C ~/.config/newsboat/newsboat.conf -c ~/.config/newsboat/cache.db -u ~/.config/newsboat/urls'
 alias proton='~/.local/share/Steam/steamapps/common/Proton\ -\ Experimental/proton run'
-alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton8-24/proton run'
+alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton8-25/proton run'
 alias ytdlpa='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3'
 alias ytdlp='yt-dlp'
 
 # envycontrol for nvidia optimus
-alias dedicated='sudo envycontrol -s nvidia --coolbits 28 --verbose' # --force-comp
-alias hybrid='sudo envycontrol -s hybrid --rtd3 3 --verbose'
-alias integrated='sudo envycontrol -s integrated --verbose'
+envycontrol='/home/alphara/dev/envycontrol/envycontrol.py'
+alias dedicated='sudo $envycontrol -s nvidia --coolbits 28 --verbose' # --force-comp
+alias hybrid='sudo $envycontrol -s hybrid --rtd3 3 --verbose'
+alias integrated='sudo $envycontrol -s integrated --verbose'

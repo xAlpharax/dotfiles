@@ -66,7 +66,7 @@
             "consistent": "image"
         },
         "BANger": {
-            "enabled": false,
+            "enabled": true,
             "source": "https://i.imgur.com/wp5q52C.mp4"
         },
         "BetterFolders": {
@@ -202,7 +202,7 @@
             "enabled": true
         },
         "LastFMRichPresence": {
-            "enabled": false,
+            "enabled": true,
             "shareUsername": false,
             "hideWithSpotify": true,
             "statusName": "some music",
@@ -341,8 +341,8 @@
             "epic": false
         },
         "Party mode 🎉": {
-            "enabled": true,
-            "superIntensePartyMode": 0
+            "enabled": false,
+            "superIntensePartyMode": 2
         },
         "PermissionsViewer": {
             "enabled": true,
@@ -418,7 +418,7 @@
             "enabled": true
         },
         "SendTimestamps": {
-            "enabled": false
+            "enabled": true
         },
         "ServerListIndicators": {
             "enabled": true,
@@ -445,7 +445,7 @@
             "hideUnreads": true
         },
         "ShowMeYourName": {
-            "enabled": false
+            "enabled": true
         },
         "SilentMessageToggle": {
             "enabled": true
@@ -517,7 +517,7 @@
             "showVoiceChannelSectionHeader": true
         },
         "USRBG": {
-            "enabled": true,
+            "enabled": false,
             "voiceBackground": true,
             "nitroFirst": true
         },
@@ -613,7 +613,16 @@
             "enabled": false
         },
         "SuperReactionTweaks": {
+            "enabled": false,
+            "superReactByDefault": true,
+            "unlimitedSuperReactionPlaying": false,
+            "superReactionPlayingLimit": 20
+        },
+        "ClientTheme": {
             "enabled": false
+        },
+        "FixImagesQuality": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -626,6 +635,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1699799026302
+        "settingsSyncVersion": 1701870611667
     }
 }
