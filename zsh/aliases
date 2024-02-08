@@ -2,11 +2,13 @@
 
 ## # zsh / aliases # ##
 
+alias grep='grep --colour=auto'
 alias ls='ls --color=auto'
 
 # shorthands
 alias ll='ls -lGh'
 alias la='ls -lGAh'
+alias lu='ls -lSh'
 alias lf='ranger'
 alias du='du -sh'
 alias df='df -h'
@@ -14,16 +16,17 @@ alias cl='clear'
 
 alias am='alsamixer --card 0'
 alias x='cd ~ ; startx'
+alias vim='nvim'
+alias vi='nvim'
 alias v='nvim'
 
 alias fzf='sk'
 
-# secure shells
-alias spi='ssh -X pi@192.168.0.130'
-
 # directories
 configdir=$HOME/.config
 alias cds='cd $configdir/suckless/'
+
+# zsh
 alias zal='vim $configdir/zsh/aliases'
 alias zrc='vim $configdir/zsh/zshrc'
 alias zen='vim $configdir/zsh/env'
@@ -32,6 +35,7 @@ alias zen='vim $configdir/zsh/env'
 alias xbpi='sudo xbps-install'
 alias xbpr='sudo xbps-remove'
 alias xbpq='xbps-query -Rs'
+alias xbpl='xbps-query -l'
 
 # scripts
 scriptdir=$HOME/.scripts
@@ -50,8 +54,12 @@ alias sxiv='sxiv -bpqra'
 
 # tools
 alias newsboat='newsboat -C ~/.config/newsboat/newsboat.conf -c ~/.config/newsboat/cache.db -u ~/.config/newsboat/urls'
+alias mpv="mpv -ytdl-format='bestvideo[ext=mp4][width<=1920][height<=1080]+bestaudio[ext=m4a]'"
+alias w2x="waifu2x-converter-cpp -f png --noise-level 3 -c 9 -q 100 --disable-gpu --mode noise-scale -i"
 alias proton='~/.local/share/Steam/steamapps/common/Proton\ -\ Experimental/proton run'
-alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton8-25/proton run'
+alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton8-27/proton run'
+alias catgirl="catgirl -h irc.libera.chat -j '#voidlinux'"
+alias streamlink='streamlink --default-stream best --twitch-disable-ads --player mpv'
 alias ytdlpa='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3'
 alias ytdlp='yt-dlp'
 

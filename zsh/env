@@ -5,6 +5,7 @@
 ### apps to open stuff ###
 
 export EDITOR="nvim"
+export COLORTERM="truecolor"
 export BROWSER="brave"
 export CHROME_EXECUTABLE="chromium"
 export TERM="st"
@@ -15,16 +16,25 @@ export BAT_THEME="base16"
 export GPG_TTY=$(tty)
 
 ### dotnet disable telemetry ###
+export DOTNET_ROOT=/home/alphara/dev/dotnet
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 ### dbus stuff ###
 export NO_AT_BRIDGE=1
 
 ### paths ###
-export PATH=/bin:/sbin/:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/alphara/.local/bin:/home/alphara/exfatssd/IEUCYS/flutter/bin:/usr/local/go/bin:/home/alphara/.pub-cache/bin
+export PATH=/bin:/sbin/:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/alphara/.local/bin:/home/alphara/.cargo/bin:/home/alphara/exfatssd/IEUCYS/flutter/bin:/usr/local/go/bin:/home/alphara/.pub-cache/bin:/home/alphara/dev/dotnet
 
 ### XDG ###
+##export XDG_DATA_DIRS=/home/alphara/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+##export XDG_RUNTIME_DIR=/run/user/1000
 export XDG_CONFIG_HOME=/home/alphara/.config
+#export XDG_CONFIG_DIRS=/etc/xdg
+#export XDG_SESSION_TYPE=tty
+#export XDG_SESSION_CLASS=user
+#export XDG_SESSION_ID=1
+#export XDG_SEAT=seat0
+#export XDG_VTNR=1
 
 ### steam ###
 export STEAM_COMPAT_DATA_PATH=~/.local/share/Steam/steamapps/compatdata
@@ -52,7 +62,8 @@ export GTK2_RC_FILES=/usr/share/themes/Arc-Dark/gtk-2.0/gtkrc
 export QT_STYLE_OVERRIDE=adwaita-dark
 
 ### pipewire ###
-export PIPEWIRE_LATENCY=480/48000 # IF NEEDED 16/48000 ~ 0.33 ms latency
+#export PIPEWIRE_LATENCY=240/48000 # IF NEEDED 16/48000 ~ 0.33 ms latency / 48/48000 ~ 1 ms latency
+                                 #           5/48000 ~ 0.1 ms latency / 10/48000 ~ 0.2 ms latency
 
 ### cuda & ML ###
 export PATH=$PATH:/usr/local/cuda-11.7/bin

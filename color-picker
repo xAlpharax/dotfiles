@@ -2,7 +2,11 @@
 
 set -e
 
-SELECTED_COLOR=$(grabc)
+# if you want to view colors use gcolor3 from the repos
+
+SELECTED_COLOR=$(xcolor) # use xcolor or xoris ; xcolor has zoom feature
+
+# Copy to clipboard
 
 echo $SELECTED_COLOR | xsel -b
 echo $SELECTED_COLOR

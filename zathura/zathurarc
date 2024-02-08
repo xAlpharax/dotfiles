@@ -1,3 +1,12 @@
+# Invert colors for dark theme (remapped to Ctrl+i)
 map <C-i> recolor
 
+# Clipboard
 set selection-clipboard clipboard
+
+# Scroll and Zoom step size
+set scroll-step 80
+set zoom-step 20
+
+# Enable incremental search
+set incremental-search true

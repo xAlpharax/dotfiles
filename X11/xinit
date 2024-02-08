@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #                  #
 # ## ~/.xinitrc ## #
@@ -7,10 +7,10 @@
 xrandr --output HDMI-0 --mode 1920x1080 -r 240
 xrandr --output HDMI-1-0 --mode 1920x1080 -r 240
 
-#xrandr -s 1920x1080 -r 144 &        # target screen resolution
+xrandr -s 1920x1080 -r 144 &        # target screen resolution
 xset r rate 300 30 &                # key repeat delay and speed
 
-xrdb merge ~/.Xresources            # resources
+xrdb merge ~/.Xresources            # asset resources
 picom &                             # compositor
 
 #                  #
@@ -41,17 +41,14 @@ synclient TapButton1=1 TapButton2=3 ClickFinger3=0                      # tap to
 synclient MinSpeed=1.25 MaxSpeed=2.5                                    # pointer speed
 synclient AccelFactor=0.025                                             # acceleration
 
-amixer --card 0 set 'Master' 100 &
-amixer --card 0 set 'Capture' 39 &
+amixer --card 0 set 'Master' 100 &                                      # audio volume
+amixer --card 0 set 'Capture' 39 &                                      # capture volume
 
 sxhkd -c $HOME/.config/keybinds &                                       # keybindings
 
-eval $(dbus-dbus-launch --sh-syntax --exit-with-x11)                    # dbus session
-dbus-run-session pipewire &
+eval $(dbus-launch --sh-syntax --exit-with-x11)                         # dbus session
+dbus-run-session pipewire &                                             # audio server
 
-exec slstatus &                                                         # statusbar
+slstatus &                                                              # statusbar
 
-while :;
-do
-    ssh-agent dwm
-done
+exec dbus-launch --exit-with-session dwm                                # window manager

@@ -9,7 +9,8 @@ doVAR=$(echo -e "dwmkill\npicomkill\nsleeeeeeep\nrebooooooot\npoweroff" | $confi
 case $doVAR in
     "");;
     "dwmkill")
-        pkill xinit;;
+        pkill dwm;;
+        #pkill xinit;;
     "picomkill")
         pkill picom;;
     "sleeeeeeep")

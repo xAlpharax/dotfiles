@@ -87,7 +87,7 @@
             "noSpellCheck": true
         },
         "BetterRoleDot": {
-            "enabled": false,
+            "enabled": true,
             "bothStyles": true,
             "copyRoleColorInProfilePopout": true
         },
@@ -166,7 +166,8 @@
             "enabled": true
         },
         "GameActivityToggle": {
-            "enabled": true
+            "enabled": true,
+            "oldIcon": false
         },
         "GifPaste": {
             "enabled": true
@@ -418,7 +419,8 @@
             "enabled": true
         },
         "SendTimestamps": {
-            "enabled": true
+            "enabled": true,
+            "replaceMessageContents": true
         },
         "ServerListIndicators": {
             "enabled": true,
@@ -445,7 +447,10 @@
             "hideUnreads": true
         },
         "ShowMeYourName": {
-            "enabled": true
+            "enabled": true,
+            "displayNames": false,
+            "mode": "user-nick",
+            "inReplies": false
         },
         "SilentMessageToggle": {
             "enabled": true
@@ -467,7 +472,7 @@
         "SpotifyCrack": {
             "enabled": true,
             "noSpotifyAutoPause": true,
-            "keepSpotifyActivityOnIdle": false
+            "keepSpotifyActivityOnIdle": true
         },
         "SpotifyShareCommands": {
             "enabled": true
@@ -482,7 +487,7 @@
             "enabled": false
         },
         "TimeBarAllActivities": {
-            "enabled": false
+            "enabled": true
         },
         "Translate": {
             "enabled": true,
@@ -494,7 +499,8 @@
         },
         "TypingIndicator": {
             "enabled": true,
-            "includeMutedChannels": false
+            "includeMutedChannels": false,
+            "includeCurrentChannel": true
         },
         "TypingTweaks": {
             "enabled": true,
@@ -517,7 +523,7 @@
             "showVoiceChannelSectionHeader": true
         },
         "USRBG": {
-            "enabled": false,
+            "enabled": true,
             "voiceBackground": true,
             "nitroFirst": true
         },
@@ -604,7 +610,7 @@
             "enabled": true
         },
         "ShowTimeouts": {
-            "enabled": false
+            "enabled": true
         },
         "ThemeAttributes": {
             "enabled": true
@@ -619,9 +625,32 @@
             "superReactionPlayingLimit": 20
         },
         "ClientTheme": {
-            "enabled": false
+            "enabled": false,
+            "color": "313338"
         },
         "FixImagesQuality": {
+            "enabled": true
+        },
+        "Decor": {
+            "enabled": true
+        },
+        "NotificationVolume": {
+            "enabled": true,
+            "notificationVolume": 50
+        },
+        "XSOverlay": {
+            "enabled": false
+        },
+        "BetterGifPicker": {
+            "enabled": true
+        },
+        "FixCodeblockGap": {
+            "enabled": true
+        },
+        "FixYoutubeEmbeds": {
+            "enabled": true
+        },
+        "ChatInputButtonAPI": {
             "enabled": true
         }
     },
@@ -635,6 +664,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1701870611667
+        "settingsSyncVersion": 1707256671540
     }
 }

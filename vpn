@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+case $1 in
+
+    up)
+        sudo wg-quick up vpn ;;
+
+    down)
+        sudo wg-quick down vpn ;;
+
+    status)
+        sudo wg ;;
+
+esac

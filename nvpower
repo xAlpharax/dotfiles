@@ -2,16 +2,17 @@
 
 set -e
 
-if [ $1 == "min" ] ; then
-    nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=0"
-fi
+case $1 in
 
-if [ $1 == "max" ] ; then
-    nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=1"
-fi
+    min)
+        nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=0" ;;
 
-if [ $1 == "auto" ] ; then
-    nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=2"
-fi
+    max)
+        nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=1" ;;
+
+    auto)
+        nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=2"
+
+esac
 
 nvidia-settings -q GpuPowerMizerMode
