@@ -7,9 +7,13 @@ recordingPATH=~/media/screenrecords/
 case $1 in
 
     start)
+        dunstify -t 2000 -i /dev/null "  Recording Starts In 3 Seconds"
+        sleep 3
         ffmpeg -video_size 1920x1080 -framerate 60 -f x11grab -i :0.0+0,0 ${recordingPATH}screenrecording_$(($(ls $recordingPATH | wc -l)+1)).mp4 ;;
 
     stop)
-        pkill ffmpeg ;;
+        pkill ffmpeg
+        dunstify -t 2000 -i /dev/null "  Recording Finished"
+        ;;
 
 esac

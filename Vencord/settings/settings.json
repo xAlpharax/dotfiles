@@ -2,7 +2,7 @@
     "notifyAboutUpdates": true,
     "autoUpdate": true,
     "autoUpdateNotification": true,
-    "useQuickCss": true,
+    "useQuickCss": false,
     "themeLinks": [],
     "enabledThemes": [],
     "enableReactDevtools": false,
@@ -57,7 +57,9 @@
             "enabled": true
         },
         "AlwaysTrust": {
-            "enabled": true
+            "enabled": true,
+            "domain": true,
+            "file": true
         },
         "AnonymiseFileNames": {
             "enabled": false,
@@ -120,9 +122,6 @@
             "enabled": false,
             "type": 0,
             "timestampMode": 0
-        },
-        "DisableDMCallIdle": {
-            "enabled": true
         },
         "EmoteCloner": {
             "enabled": true
@@ -216,7 +215,9 @@
             "replaceEvents": true
         },
         "MemberCount": {
-            "enabled": true
+            "enabled": true,
+            "memberList": true,
+            "toolTip": true
         },
         "MessageClickActions": {
             "enabled": false,
@@ -229,10 +230,10 @@
             "enabled": true
         },
         "MessageLogger": {
-            "enabled": false,
-            "deleteStyle": "text",
-            "ignoreBots": false,
-            "ignoreSelf": false,
+            "enabled": true,
+            "deleteStyle": "overlay",
+            "ignoreBots": true,
+            "ignoreSelf": true,
             "ignoreUsers": "",
             "ignoreChannels": "",
             "ignoreGuilds": ""
@@ -248,7 +249,7 @@
             "enabled": true
         },
         "MoreUserTags": {
-            "enabled": false,
+            "enabled": true,
             "tagSettings": {
                 "WEBHOOK": {
                     "text": "Webhook",
@@ -290,9 +291,6 @@
             "ignoreBlocked": true,
             "quality": "Normal"
         },
-        "MuteNewGuild": {
-            "enabled": true
-        },
         "MutualGroupDMs": {
             "enabled": true
         },
@@ -318,7 +316,10 @@
             "enabled": false
         },
         "NoReplyMention": {
-            "enabled": false
+            "enabled": false,
+            "userList": "1234567890123445,1234567890123445",
+            "shouldPingListed": true,
+            "inverseShiftReply": false
         },
         "NoScreensharePreview": {
             "enabled": false
@@ -354,7 +355,8 @@
             "enabled": true
         },
         "PinDMs": {
-            "enabled": true
+            "enabled": true,
+            "dmSectioncollapsed": false
         },
         "PlainFolderIcon": {
             "enabled": false
@@ -456,7 +458,7 @@
             "enabled": true
         },
         "SilentTyping": {
-            "enabled": true,
+            "enabled": false,
             "showIcon": true,
             "isEnabled": true
         },
@@ -478,7 +480,7 @@
             "enabled": true
         },
         "StartupTimings": {
-            "enabled": false
+            "enabled": true
         },
         "SupportHelper": {
             "enabled": true
@@ -515,7 +517,8 @@
             "enabled": true
         },
         "UrbanDictionary": {
-            "enabled": true
+            "enabled": true,
+            "resultsAmount": 10
         },
         "UserVoiceShow": {
             "enabled": true,
@@ -599,7 +602,7 @@
             "enabled": false
         },
         "PermissionFreeWill": {
-            "enabled": false,
+            "enabled": true,
             "lockout": true,
             "onboarding": true
         },
@@ -616,12 +619,12 @@
             "enabled": true
         },
         "NoTypingAnimation": {
-            "enabled": false
+            "enabled": true
         },
         "SuperReactionTweaks": {
-            "enabled": false,
+            "enabled": true,
             "superReactByDefault": true,
-            "unlimitedSuperReactionPlaying": false,
+            "unlimitedSuperReactionPlaying": true,
             "superReactionPlayingLimit": 20
         },
         "ClientTheme": {
@@ -639,7 +642,14 @@
             "notificationVolume": 50
         },
         "XSOverlay": {
-            "enabled": false
+            "enabled": false,
+            "ignoreBots": false,
+            "pingColor": "#7289da",
+            "channelPingColor": "#8a2be2",
+            "soundPath": "default",
+            "timeout": 1,
+            "opacity": 1,
+            "volume": 0.2
         },
         "BetterGifPicker": {
             "enabled": true
@@ -652,6 +662,37 @@
         },
         "ChatInputButtonAPI": {
             "enabled": true
+        },
+        "DisableCallIdle": {
+            "enabled": true
+        },
+        "NewGuildSettings": {
+            "enabled": true,
+            "guild": true,
+            "everyone": true,
+            "role": true,
+            "showAllChannels": true
+        },
+        "BetterRoleContext": {
+            "enabled": true
+        },
+        "BetterSettings": {
+            "enabled": true,
+            "disableFade": true,
+            "organizeMenu": true,
+            "eagerLoad": true
+        },
+        "FriendsSince": {
+            "enabled": true
+        },
+        "OverrideForumDefaults": {
+            "enabled": false,
+            "defaultLayout": 1,
+            "defaultSortOrder": 0
+        },
+        "ResurrectHome": {
+            "enabled": false,
+            "forceServerHome": false
         }
     },
     "notifications": {
@@ -664,6 +705,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1707256671540
+        "settingsSyncVersion": 1711706973848
     }
 }

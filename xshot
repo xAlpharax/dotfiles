@@ -9,9 +9,9 @@ cd $screenshotPATH
 case $1 in
 
     full)
-        scrot -z -q 100 "%Y-%m-%d %H:%M:%S.png" ;;
+        scrot -z -q 100 "%Y-%m-%d %H:%M:%S.png" && dunstify -i /dev/null "Screenshot" ;;
 
     area)
-        scrot -z -q 100 -s "%Y-%m-%d %H:%M:%S.png" ;; # -f --freeze
+        scrot -z -q 100 -s "%Y-%m-%d %H:%M:%S.png" && dunstify -i /dev/null "Screenshot" ;; # -f --freeze
 
 esac

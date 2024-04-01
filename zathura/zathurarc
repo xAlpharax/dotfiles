@@ -10,3 +10,6 @@ set zoom-step 20
 
 # Enable incremental search
 set incremental-search true
+
+# Hide the toolbar at startup
+set guioptions none

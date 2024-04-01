@@ -4,8 +4,9 @@
 # ## ~/.xinitrc ## #
 #                  #
 
-xrandr --output HDMI-0 --mode 1920x1080 -r 240
-xrandr --output HDMI-1-0 --mode 1920x1080 -r 240
+#xrandr --output HDMI-0 --mode 3840x2160 --auto -r 60 & # 120
+xrandr --output HDMI-0 --mode 1920x1080 -r 240 &
+xrandr --output HDMI-1-0 --mode 1920x1080 -r 240 &
 
 xrandr -s 1920x1080 -r 144 &        # target screen resolution
 xset r rate 300 30 &                # key repeat delay and speed
@@ -18,6 +19,8 @@ picom &                             # compositor
 #                  #
 
 feh --bg-fill --no-fehbg ~/.config/backgrounds/darkflowers.jpg &        # wallpaper
+
+libinput-gestures-setup start &                                         # Prevent accidental touch
 
 synclient ClickPad=1                                                    # buttonless pad
 
@@ -45,6 +48,11 @@ amixer --card 0 set 'Master' 100 &                                      # audio 
 amixer --card 0 set 'Capture' 39 &                                      # capture volume
 
 sxhkd -c $HOME/.config/keybinds &                                       # keybindings
+
+xautolock -time 10 -locker lock &                                       # xautolock screen in x minutes
+# lock is a custom script that locks the screen (~/.config/lock)
+
+syncthing serve --no-browser &>/dev/null &                              # start syncthing server
 
 eval $(dbus-launch --sh-syntax --exit-with-x11)                         # dbus session
 dbus-run-session pipewire &                                             # audio server

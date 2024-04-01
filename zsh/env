@@ -5,10 +5,13 @@
 ### apps to open stuff ###
 
 export EDITOR="nvim"
+export VISUAL="nvim"
 export COLORTERM="truecolor"
 export BROWSER="brave"
 export CHROME_EXECUTABLE="chromium"
-export TERM="st"
+export TERM="st-256color"
+export TERMINAL="st-256color"
+export TERMINAL_PROG="st-256color"
 
 export BAT_THEME="base16"
 
@@ -55,11 +58,9 @@ export VKD3D_CONFIG=dxr,dxr11
 
 ### QT and GTK ###
 
-# export QT_QPA_PLATFORMTHEME=qt5ct
-
 export GTK_THEME=Arc:dark
 export GTK2_RC_FILES=/usr/share/themes/Arc-Dark/gtk-2.0/gtkrc
-export QT_STYLE_OVERRIDE=adwaita-dark
+export QT_STYLE_OVERRIDE=kvantum
 
 ### pipewire ###
 #export PIPEWIRE_LATENCY=240/48000 # IF NEEDED 16/48000 ~ 0.33 ms latency / 48/48000 ~ 1 ms latency

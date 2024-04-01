@@ -10,10 +10,24 @@ alias ll='ls -lGh'
 alias la='ls -lGAh'
 alias lu='ls -lSh'
 alias lf='ranger'
+alias lc="wc -l"
 alias du='du -sh'
 alias df='df -h'
 alias cl='clear'
 
+alias mkdir="mkdir -pv"
+alias cp="cp -v"
+alias mv="mv -v"
+alias rm="rm -Iv"
+alias ln="ln -v"
+alias chown="chown -v"
+alias chmod="chmod -v"
+alias chgrp="chgrp -v"
+alias m="make -j`nproc`"
+alias mc="make clean"
+
+alias hd='hexdump -C'
+alias tmux="tmux new -A"
 alias am='alsamixer --card 0'
 alias x='cd ~ ; startx'
 alias vim='nvim'
@@ -36,6 +50,7 @@ alias xbpi='sudo xbps-install'
 alias xbpr='sudo xbps-remove'
 alias xbpq='xbps-query -Rs'
 alias xbpl='xbps-query -l'
+alias xbpm='xbps-query -m'
 
 # scripts
 scriptdir=$HOME/.scripts
@@ -57,14 +72,20 @@ alias newsboat='newsboat -C ~/.config/newsboat/newsboat.conf -c ~/.config/newsbo
 alias mpv="mpv -ytdl-format='bestvideo[ext=mp4][width<=1920][height<=1080]+bestaudio[ext=m4a]'"
 alias w2x="waifu2x-converter-cpp -f png --noise-level 3 -c 9 -q 100 --disable-gpu --mode noise-scale -i"
 alias proton='~/.local/share/Steam/steamapps/common/Proton\ -\ Experimental/proton run'
-alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton8-27/proton run'
+alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton9-2/proton run'
 alias catgirl="catgirl -h irc.libera.chat -j '#voidlinux'"
 alias streamlink='streamlink --default-stream best --twitch-disable-ads --player mpv'
 alias ytdlpa='yt-dlp --extract-audio --audio-quality 0 --audio-format mp3'
 alias ytdlp='yt-dlp'
+alias getyt='yt-dlp -S res,ext:mp4:m4a --recode mp4'
+alias yt='mpv --ytdl-format="bestvideo[ext=mp4]+bestaudio[ext=m4a]"'
+alias yt2='mpv --ytdl-format="bestvideo[ext=mp4]+bestaudio[ext=m4a]"'
+alias yt3='mpv --ytdl-format="bestvideo[ext=mp4]+bestaudio[ext=m4a]"'
+alias ytmp3='yt-dlp -f 'ba' -x --audio-format mp3'
 
 # envycontrol for nvidia optimus
 envycontrol='/home/alphara/dev/envycontrol/envycontrol.py'
-alias dedicated='sudo $envycontrol -s nvidia --coolbits 28 --verbose' # --force-comp
-alias hybrid='sudo $envycontrol -s hybrid --rtd3 3 --verbose'
+alias dedicated='sudo $envycontrol -s nvidia --coolbits 28 --verbose'
+alias dedicated-force='sudo $envycontrol -s nvidia --coolbits 28 --verbose --force-comp'
 alias integrated='sudo $envycontrol -s integrated --verbose'
+alias hybrid='sudo $envycontrol -s hybrid --rtd3 3 --verbose'

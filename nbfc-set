@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+if [ $1 == "--auto" ] || [ $1 == "auto" ] ; then
+    sudo nbfc set -f=0 -a
+    sudo nbfc set -f=1 -a
+    exit 1
+fi
+
+sudo nbfc set -f=0 -s $1
+sudo nbfc set -f=1 -s $1

@@ -2,15 +2,16 @@
 
 set -e
 
-backgrounds=/home/$USER/.config/backgrounds
-config=$(bash ~/.config/dmenu.conf)
+backgrounds_dir=/home/$USER/.config/backgrounds
+dmenu_config=$(bash ~/.config/dmenu.conf)
 
-n_files=$(($(ls -l $backgrounds | wc -l) - 1))
+number_of_files=$(ls $backgrounds_dir | wc -l)
 
 # Use dmenu to prompt the user to select a file
-selected_file=$(find $backgrounds -maxdepth 1 -type f -printf '%f\n' | $config -i -l $n_files)
+selected_file=$(ls $backgrounds_dir | sort | $dmenu_config -i -l $number_of_files -p "Select a wallpaper:")
 
-# If the user selected a file, execute it
+# If the user selected a file, set it as the wallpaper
 if [ -n "$selected_file" ]; then
-    feh --bg-fill --no-fehbg "${backgrounds}/${selected_file}"
+    feh --bg-fill --no-fehbg "${backgrounds_dir}/${selected_file}"
+    echo "feh --bg-fill --no-fehbg '${backgrounds_dir}/${selected_file}'"
 fi

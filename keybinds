@@ -6,6 +6,11 @@ alt + t
 alt + shift + t
     pkill screenkey
 
+# X11 Color Picker
+
+alt + c
+    color-picker
+
 # Screen Shots
 
 alt + control + Print
@@ -28,23 +33,9 @@ alt + shift + r
 alt + shift + e
     xrec stop
 
-# X11 Color Picker
+### HARDWARE KEYS ###
 
-alt + c
-    color-picker
-
-# xsecurelock
-
-alt + shift + BackSpace
-    pkill picom; \
-    env \
-    XSECURELOCK_PASSWORD_PROMPT=time_hex \
-    XSECURELOCK_FONT="inconsolata:size=17" \
-    XSECURELOCK_DATETIME_FORMAT="</%B %d> <%H:%M>" \
-    XSECURELOCK_SHOW_DATETIME=1 \
-    xsecurelock
-
-# brightness trick
+# brightness control
 
 XF86MonBrightnessDown
     sudo backlight 0
@@ -52,10 +43,37 @@ XF86MonBrightnessDown
 XF86MonBrightnessUp
     sudo backlight 255
 
-# volume
+# volume control
 XF86Audio{Raise,Lower}Volume
     amixer --card 0 set Master 1%{+,-}
 
-# mute audio out
+# mute audio output control
 XF86AudioMute
     [ $(amixer --card 0 get Master | tail -n 1 | sed -E 's/.*.\[//g' | cut -c1-2) = "on" ] && amixer --card 0 set Master mute || amixer --card 0 set Master unmute
+
+### APPLICATIONS ###
+
+# Firefox
+
+alt + f
+    firefox
+
+# Brave
+
+alt + shift + f
+    brave
+
+# LibreWolf
+
+alt + w
+    librewolf
+
+# Discord
+
+alt + d
+    discord
+
+# Dino
+
+alt + shift + d
+    dino
