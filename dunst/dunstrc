@@ -191,7 +191,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /home/alphara/.config/dmenu.conf -p dunst:
+    dmenu = ~/.config/dmenu.conf -p dunst:
 
     # Browser for opening urls in context menu.
     browser = /bin/firefox -new-tab
