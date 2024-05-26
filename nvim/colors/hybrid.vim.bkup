@@ -19,7 +19,6 @@
 " https://github.com/altercation/vim-colors-solarized
 
 "}}}
-
 " Requirements And Recommendations:"{{{
 " ----------------------------------------------------------------------------
 " Requirements
@@ -93,33 +92,33 @@ if exists("g:hybrid_reduced_contrast") && g:hybrid_reduced_contrast == 1
 else
   let s:gui_background = "#1d1f21"
   let s:gui_selection  = "#373b41"
-  let s:gui_line       = "#282c34"
+  let s:gui_line       = "#282a2e"
   let s:gui_comment    = "#707880"
 endif
 
-let s:palette.gui.background = { 'dark' : "#0a001f"        , 'light' : "#e94c80" }
-let s:palette.gui.foreground = { 'dark' : "#ace6f0"        , 'light' : "#0a001f" }
-let s:palette.gui.selection  = { 'dark' : "#6740ba"        , 'light' : "#ace6f0" }
-let s:palette.gui.line       = { 'dark' : "#828ff9"        , 'light' : "#ace6f0" }
-let s:palette.gui.comment    = { 'dark' : "#eebea4"        , 'light' : "#ace6f0" }
-let s:palette.gui.red        = { 'dark' : "#e94c80"        , 'light' : "#5f0000" }
-let s:palette.gui.orange     = { 'dark' : "#ac96dc"        , 'light' : "#875f00" }
-let s:palette.gui.yellow     = { 'dark' : "#ac96dc"        , 'light' : "#5f5f00" }
-let s:palette.gui.green      = { 'dark' : "#828ff9"        , 'light' : "#828ff9" }
-let s:palette.gui.aqua       = { 'dark' : "#ace6f0"        , 'light' : "#828ff9" }
-let s:palette.gui.blue       = { 'dark' : "#e94c80"        , 'light' : "#00005f" }
-let s:palette.gui.purple     = { 'dark' : "#ac96dc"        , 'light' : "#5f005f" }
-let s:palette.gui.window     = { 'dark' : "#0a001f"        , 'light' : "#9e9e9e" }
-let s:palette.gui.darkcolumn = { 'dark' : "#0a001f"        , 'light' : "#808080" }
-let s:palette.gui.addbg      = { 'dark' : "#e94c80"        , 'light' : "#d7ffd7" }
-let s:palette.gui.addfg      = { 'dark' : "#e94c80"        , 'light' : "#828ff9" }
-let s:palette.gui.changebg   = { 'dark' : "#9e9e9e"        , 'light' : "#e94c80" }
-let s:palette.gui.changefg   = { 'dark' : "#828ff9"        , 'light' : "#5f005f" }
-let s:palette.gui.delbg      = { 'dark' : "#e94c80"        , 'light' : "#ffd7d7" }
-let s:palette.gui.darkblue   = { 'dark' : "#828ff9"        , 'light' : "#d7ffd7" }
-let s:palette.gui.darkcyan   = { 'dark' : "#828ff9"        , 'light' : "#828ff9" }
+let s:palette.gui.background = { 'dark' : s:gui_background , 'light' : "#e4e4e4" }
+let s:palette.gui.foreground = { 'dark' : "#c5c8c6"        , 'light' : "#000000" }
+let s:palette.gui.selection  = { 'dark' : s:gui_selection  , 'light' : "#bcbcbc" }
+let s:palette.gui.line       = { 'dark' : s:gui_line       , 'light' : "#d0d0d0" }
+let s:palette.gui.comment    = { 'dark' : s:gui_comment    , 'light' : "#5f5f5f" }
+let s:palette.gui.red        = { 'dark' : "#cc6666"        , 'light' : "#5f0000" }
+let s:palette.gui.orange     = { 'dark' : "#de935f"        , 'light' : "#875f00" }
+let s:palette.gui.yellow     = { 'dark' : "#f0c674"        , 'light' : "#5f5f00" }
+let s:palette.gui.green      = { 'dark' : "#b5bd68"        , 'light' : "#005f00" }
+let s:palette.gui.aqua       = { 'dark' : "#8abeb7"        , 'light' : "#005f5f" }
+let s:palette.gui.blue       = { 'dark' : "#81a2be"        , 'light' : "#00005f" }
+let s:palette.gui.purple     = { 'dark' : "#b294bb"        , 'light' : "#5f005f" }
+let s:palette.gui.window     = { 'dark' : "#303030"        , 'light' : "#9e9e9e" }
+let s:palette.gui.darkcolumn = { 'dark' : "#1c1c1c"        , 'light' : "#808080" }
+let s:palette.gui.addbg      = { 'dark' : "#5F875F"        , 'light' : "#d7ffd7" }
+let s:palette.gui.addfg      = { 'dark' : "#d7ffaf"        , 'light' : "#005f00" }
+let s:palette.gui.changebg   = { 'dark' : "#5F5F87"        , 'light' : "#d7d7ff" }
+let s:palette.gui.changefg   = { 'dark' : "#d7d7ff"        , 'light' : "#5f005f" }
+let s:palette.gui.delbg      = { 'dark' : "#cc6666"        , 'light' : "#ffd7d7" }
+let s:palette.gui.darkblue   = { 'dark' : "#00005f"        , 'light' : "#d7ffd7" }
+let s:palette.gui.darkcyan   = { 'dark' : "#005f5f"        , 'light' : "#005f00" }
 let s:palette.gui.darkred    = { 'dark' : "#5f0000"        , 'light' : "#d7d7ff" }
-let s:palette.gui.darkpurple = { 'dark' : "#e94c80"        , 'light' : "#5f005f" }
+let s:palette.gui.darkpurple = { 'dark' : "#5f005f"        , 'light' : "#5f005f" }
 
 if exists("g:hybrid_custom_term_colors") && g:hybrid_custom_term_colors == 1
   "                              light dark
@@ -290,26 +289,25 @@ exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 "   Cursor"
 "   CursorIM"
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! CursorLine"    .s:fg_none        .s:bg_selection   .s:fmt_none
+exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! Directory"     .s:fg_blue        .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
 exe "hi! DiffChange"    .s:fg_changefg    .s:bg_changebg    .s:fmt_none
 exe "hi! DiffDelete"    .s:fg_background  .s:bg_delbg       .s:fmt_none
 exe "hi! DiffText"      .s:fg_background  .s:bg_blue        .s:fmt_none
-exe "hi! ErrorMsg"      .s:fg_red         .s:fg_red         .s:fmt_stnd
-" OR change ErrorMsg fmt to fmt_none for no bg highlighting, just red text
+exe "hi! ErrorMsg"      .s:fg_background  .s:bg_red         .s:fmt_stnd
 exe "hi! VertSplit"     .s:fg_window      .s:bg_none        .s:fmt_none
 exe "hi! Folded"        .s:fg_comment     .s:bg_darkcolumn  .s:fmt_none
 exe "hi! FoldColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
-" Incsearch"
+"   Incsearch"
 exe "hi! LineNr"        .s:fg_line        .s:bg_none        .s:fmt_none
 " fg_selection on first column
-exe "hi! CursorLineNr"  .s:fg_red         .s:bg_none        .s:fmt_none
+exe "hi! CursorLineNr"  .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! MatchParen"    .s:fg_background  .s:bg_changebg    .s:fmt_none
 exe "hi! ModeMsg"       .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_green       .s:bg_none        .s:fmt_none
-exe "hi! NonText"       .s:fg_green       .s:bg_none        .s:fmt_none
+exe "hi! NonText"       .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! Pmenu"         .s:fg_foreground  .s:bg_selection   .s:fmt_none
 exe "hi! PmenuSel"      .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 "   PmenuSbar"
@@ -365,22 +363,22 @@ exe "hi! Operator"        .s:fg_aqua        .s:bg_none        .s:fmt_none
 "   Keyword"
 "   Exception"
 
-exe "hi! PreProc"         .s:fg_yellow        .s:bg_none        .s:fmt_none
-exe "hi! Include"         .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fmt_none
+"   Include"
 "   Define"
 "   Macro"
 "   PreCondit"
 
 exe "hi! Type"            .s:fg_orange      .s:bg_none        .s:fmt_none
 "   StorageClass"
-exe "hi! Structure"       .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! Structure"       .s:fg_aqua        .s:bg_none        .s:fmt_none
 "   Typedef"
 
 exe "hi! Special"         .s:fg_green       .s:bg_none        .s:fmt_none
 "   SpecialChar"
 "   Tag"
-exe "hi! Delimiter"       .s:fg_foreground  .s:bg_none        .s:fmt_none
-exe "hi! SpecialComment"  .s:fg_comment     .s:bg_none        .s:fmt_none
+"   Delimiter"
+"   SpecialComment"
 "   Debug"
 "
 exe "hi! Underlined"      .s:fg_blue        .s:bg_none        .s:fmt_none
@@ -423,9 +421,6 @@ hi! link diffAdded Special
 " This is needed for some reason: {{{
 
 let &background = s:style
-
-" GitGutter highlight customizations
-highlight! link SignColumn LineNr
 
 " }}}
 " Legal:"{{{

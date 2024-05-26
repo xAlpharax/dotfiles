@@ -18,7 +18,6 @@ set clipboard+=unnamedplus
     set smartindent
     set smartcase
     set incsearch
-    set incsearch
 
 " vertical and horizontal splits
     set splitbelow splitright
@@ -28,6 +27,9 @@ set clipboard+=unnamedplus
     set tabstop=4 softtabstop=4
     set shiftwidth=4
     set expandtab
+
+" auto convert tabs to spaces at file open
+    autocmd BufReadPost * :retab
 
 " removing white spaces
     autocmd BufWritePre * %s/\s\+$//e
@@ -49,7 +51,7 @@ set clipboard+=unnamedplus
     Plug 'sheerun/vim-polyglot'
     Plug 'preservim/nerdtree'
 
-    "Plug 'airblade/vim-gitgutter'
+    Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
 
     Plug 'andweeb/presence.nvim'
@@ -61,13 +63,19 @@ set clipboard+=unnamedplus
     Plug 'github/copilot.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    Plug 'neovim/nvim-lspconfig'                                " LSP
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " AST
+    Plug 'neovim/nvim-lspconfig'                                " LSP
+
+    Plug 'hrsh7th/nvim-cmp'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
 
     Plug 'ThePrimeagen/vim-be-good'
 
     Plug 'rust-lang/rust.vim'
-    "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
     call plug#end()
 
@@ -80,15 +88,10 @@ let g:syntastic_rust_checkers = ['cargo']
 " LSP
 lua require'lspconfig'.gopls.setup{}
 lua require'lspconfig'.pyright.setup{}
-lua require'lspconfig'.tsserver.setup{}
 lua require'lspconfig'.rust_analyzer.setup{}
 lua require'lspconfig'.bashls.setup{}
 lua require'lspconfig'.dartls.setup{}
-
-lua require'lspconfig'.cssls.setup{}
-"lua require'lspconfig'.vuels.setup{}
 lua require'lspconfig'.svelte.setup{}
-"lua require'lspconfig'.graphql.setup{}
 
 let g:presence_neovim_image_text="The One True Text Editor"
 let g:presence_main_image="file"
@@ -105,8 +108,8 @@ filetype plugin indent on
 set noshowmode
 
 "nvim-colorizer settings
-"set termguicolors
-"lua require'colorizer'.setup()
+set termguicolors
+lua require'colorizer'.setup()
 
 """ CtrlP
 let g:ctrlp_working_path_mode = 'ra'
@@ -115,10 +118,11 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
 
 " Cursor highlight line
-"hi CursorLine   cterm=NONE ctermbg=236
-"hi CursorColumn cterm=NONE ctermbg=236
-"nnoremap <Leader>b :set cursorline! <CR>
-" (Disable/enable) Local cursor line
+hi CursorLine   cterm=NONE ctermbg=256
+hi CursorColumn cterm=NONE ctermbg=257
+nnoremap <Leader>b :set cursorline! <CR>
+
+ "(Disable/enable) Local cursor line
 "augroup CursorLine
   "au!
   "au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
@@ -148,13 +152,13 @@ inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<
     map K j
 
 " Quick save and exit
-map zz :wq<CR>
-map zx :q!<CR>
-map zs :w<CR>
+    map zz :wq<CR>
+    map zx :q!<CR>
+    map zs :w<CR>
 
 """NeoVide
 if exists("g:neovide")
-    set guifont="Inconsolata Nerd:h14"
+    set guifont="Inconsolata Nerd:h12"
     "let g:neovide_transparency = 0.8
     let g:neovide_cursor_vfx_mode = "pixiedust"
 endif

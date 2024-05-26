@@ -1,16 +1,27 @@
 #!/bin/bash
 
-sudo cpupower frequency-set --governor performance
+case $1 in
 
-sudo cpupower frequency-set --freq 3.20GHz
-sudo cpupower frequency-set --min 3.20GHz
+    min)
+        sudo cpupower frequency-set --governor powersave
+        sudo cpupower frequency-set --related --governor powersave
+        sudo cpupower idle-set --enable-all
+        ;;
 
-sudo cpupower idle-set --disable 3
-sudo cpupower idle-set --disable 2
-sudo cpupower idle-set --disable 1
-sudo cpupower idle-set --disable 0
+    max)
+        sudo cpupower frequency-set --governor performance
+        sudo cpupower frequency-set --related --governor performance
 
-#sudo cpupower idle-set --enable-all
+        sudo cpupower frequency-set --freq 3.20GHz
+        sudo cpupower frequency-set --min 3.20GHz
+
+        sudo cpupower idle-set --disable 3
+        sudo cpupower idle-set --disable 2
+        sudo cpupower idle-set --disable 1
+        sudo cpupower idle-set --disable 0
+        ;;
+
+esac
 
 sudo cpupower frequency-info
 sudo cpupower monitor

@@ -4,7 +4,8 @@
 # ## ~/.xinitrc ## #
 #                  #
 
-#xrandr --output HDMI-0 --mode 3840x2160 --auto -r 60 & # 120
+#xrandr --output HDMI-1-0 --mode 3840x2160 -r 120 &
+#xrandr --output HDMI-0 --mode 3840x2160 -r 120 &
 xrandr --output HDMI-0 --mode 1920x1080 -r 240 &
 xrandr --output HDMI-1-0 --mode 1920x1080 -r 240 &
 
@@ -45,6 +46,7 @@ synclient MinSpeed=1.25 MaxSpeed=2.5                                    # pointe
 synclient AccelFactor=0.025                                             # acceleration
 
 amixer --card 0 set 'Master' 100 &                                      # audio volume
+amixer --card 0 set 'Mic Boost' 0 &                                     # mic boost volume
 amixer --card 0 set 'Capture' 39 &                                      # capture volume
 
 sxhkd -c $HOME/.config/keybinds &                                       # keybindings

@@ -93,5 +93,7 @@ fi
 
 # main()
 if should_lock; then
+    dunstify -u critical "Screen will close"
+    sleep 15
     lock_screen
 fi

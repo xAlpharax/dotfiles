@@ -25,13 +25,18 @@ alt + control + s
 alt + shift + s
     clip area
 
-# Screen Recordings
+# Screen Recordings (soundless)
 
 alt + shift + r
     xrec start
 
 alt + shift + e
     xrec stop
+
+# Lock Screen
+
+alt + shift + BackSpace
+    lock
 
 ### HARDWARE KEYS ###
 
@@ -71,7 +76,7 @@ alt + w
 # Discord
 
 alt + d
-    discord
+    vesktop # discord
 
 # Dino
 

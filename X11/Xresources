@@ -6,9 +6,8 @@ Xcursor.theme: SpaceKCursors
 *.font: "Inconsolata:pixelsize=17:antialias=true:autohint=true"
 
 ! special
-*.foreground:   #d9d5e6
 *.background:   #0a001f
-
+*.foreground:   #d9d5e6
 *.cursorColor:  #d9d5e6
 
 ! black
@@ -16,8 +15,8 @@ Xcursor.theme: SpaceKCursors
 *.color8:       #828ff9
 
 ! red
-*.color1:       #7f64ba
-*.color9:       #7f64ba
+*.color1:       #6740ba
+*.color9:       #6740ba
 
 ! green
 *.color2:       #828ff9
@@ -36,8 +35,8 @@ Xcursor.theme: SpaceKCursors
 *.color13:      #ace6f0
 
 ! cyan
-*.color6:       #7f64ba
-*.color14:      #7f64ba
+*.color6:       #6740ba
+*.color14:      #6740ba
 
 ! white
 *.color7:       #eebea4

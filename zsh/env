@@ -63,8 +63,9 @@ export GTK2_RC_FILES=/usr/share/themes/Arc-Dark/gtk-2.0/gtkrc
 export QT_STYLE_OVERRIDE=kvantum
 
 ### pipewire ###
-#export PIPEWIRE_LATENCY=240/48000 # IF NEEDED 16/48000 ~ 0.33 ms latency / 48/48000 ~ 1 ms latency
-                                 #           5/48000 ~ 0.1 ms latency / 10/48000 ~ 0.2 ms latency
+#export PIPEWIRE_LATENCY=256/48000 # 5.3 ms
+# IF NEEDED 128/48000 2.66 ms 64/48000 1.33 ms 32/48000 0.66 ms 16/48000 0.33 ms 8/48000 0.16 ms 4/48000 0.08 ms 2/48000 0.04 ms 1/48000 0.02 ms
+# default aim is 1024/48000 21.33 ms and my system defaults to aim to 4/48000 0.08 ms
 
 ### cuda & ML ###
 export PATH=$PATH:/usr/local/cuda-11.7/bin
