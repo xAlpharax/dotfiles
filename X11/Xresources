@@ -2,7 +2,6 @@
 
 Xcursor.theme: SpaceKCursors
 
-! *.font: "Monospace 12"
 *.font: "Inconsolata:pixelsize=17:antialias=true:autohint=true"
 
 ! special

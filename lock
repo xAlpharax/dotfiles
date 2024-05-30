@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script is a workaround for xsecurelock not being able to lock the screen when a fullscreen window is active.
+# This script is a workaround for xsecurelock not being able to lock the screen when a fullscreen window is in focus.
 
 # Lock the screen with xsecurelock and take care of picom
 lock_screen() {
@@ -30,24 +30,37 @@ lock_screen() {
 declare -a LIST_OF_WINDOW_TITLES_THAT_PREVENT_LOCKING=(
     "YouTube"
     "Netflix"
+    "Disney+"
+    "Prime Video"
+    "Hulu"
+    "HBO Max"
     "Twitch"
-    #"Spotify"
+    "Spotify"
+    "Spotube"
     "MPlayer"
     "VLC"
     "mpv"
+    "Zoom"
     "Google Meet"
     "Microsoft Teams"
-    "Zoom"
     #"Discord"
     #"Slack"
-    #"Plex"
+    "Plex"
+    "Kodi"
+    "Jellyfish"
+    "OBS"
     "CCTV"
 )
 
+#for i in "${LIST_OF_WINDOW_TITLES_THAT_PREVENT_LOCKING[@]}"; do
+    #echo $i
+#done
+
 # Dependencies
-AWK=/usr/bin/awk
-GREP=/usr/bin/grep
-XPROP=/usr/bin/xprop
+AWK=/bin/awk
+GREP=/bin/grep
+XPROP=/bin/xprop
+XWININFO=/bin/xwininfo
 
 # Find active window id
 get_active_id() {
@@ -56,7 +69,7 @@ get_active_id() {
 
 # Determine a window's title text by it's ID
 get_window_title() {
-    # For mplayer or vlc, we might need to check WM_CLASS(STRING), idk.
+    # For some apps you may need to check WM_CLASS(STRING) instead
     $XPROP -id $1 | $AWK -F '=' '$1 ~ /_NET_WM_NAME\(UTF8_STRING\)/ { print $2 }'
 }
 
@@ -68,32 +81,41 @@ is_fullscreen() {
 
 # Determine if the locker command should run based on which windows are fullscreened.
 should_lock() {
+
     id=$(get_active_id)
+    if [[ $id == "" ]]; then
+        echo "No active window found in the workspace"
+        return 0
+    fi
+    echo "$id"
+
     title=$(get_window_title $id)
+    echo "Active window:$title"
 
     if is_fullscreen $id; then
+        echo "Fullscreen window detected:$title"
+        return 1
+    else
         for i in "${LIST_OF_WINDOW_TITLES_THAT_PREVENT_LOCKING[@]}"; do
             if [[ $title =~ $i ]]; then
-                return 0
+                echo "$i was found in$title"
+                return 1
             fi
         done
-        #echo "Fullscreen window detected: $title"
         return 0
-    else
-        return 1
     fi
 }
 
 # Debugging
-if should_lock; then
-    echo "Locking the screen..."
-else
-    echo "Not locking the screen..."
-fi
+#if should_lock; then
+    #echo "Locking the screen..."
+    #/bin/dunstify -u low "Locking the screen..."
+#else
+    #echo "Not locking the screen..."
+    #/bin/dunstify -u low "Not locking the screen..."
+#fi
 
 # main()
 if should_lock; then
-    dunstify -u critical "Screen will close"
-    sleep 15
     lock_screen
 fi

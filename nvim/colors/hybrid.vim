@@ -97,29 +97,29 @@ else
   let s:gui_comment    = "#707880"
 endif
 
-let s:palette.gui.background = { 'dark' : "#0a001f"        , 'light' : "#e94c80" }
-let s:palette.gui.foreground = { 'dark' : "#ace6f0"        , 'light' : "#0a001f" }
-let s:palette.gui.selection  = { 'dark' : "#6740ba"        , 'light' : "#ace6f0" }
-let s:palette.gui.line       = { 'dark' : "#828ff9"        , 'light' : "#ace6f0" }
-let s:palette.gui.comment    = { 'dark' : "#eebea4"        , 'light' : "#ace6f0" }
-let s:palette.gui.red        = { 'dark' : "#e94c80"        , 'light' : "#5f0000" }
-let s:palette.gui.orange     = { 'dark' : "#ac96dc"        , 'light' : "#875f00" }
-let s:palette.gui.yellow     = { 'dark' : "#ac96dc"        , 'light' : "#5f5f00" }
+let s:palette.gui.background = { 'dark' : "#0a001f"        , 'light' : "#0a001f" }
+let s:palette.gui.foreground = { 'dark' : "#ace6f0"        , 'light' : "#ace6f0" }
+let s:palette.gui.selection  = { 'dark' : "#6740ba"        , 'light' : "#6740ba" }
+let s:palette.gui.line       = { 'dark' : "#828ff9"        , 'light' : "#828ff9" }
+let s:palette.gui.comment    = { 'dark' : "#eebea4"        , 'light' : "#eebea4" }
+let s:palette.gui.red        = { 'dark' : "#e94c80"        , 'light' : "#e94c80" }
+let s:palette.gui.orange     = { 'dark' : "#ac96dc"        , 'light' : "#ac96dc" }
+let s:palette.gui.yellow     = { 'dark' : "#ac96dc"        , 'light' : "#ac96dc" }
 let s:palette.gui.green      = { 'dark' : "#828ff9"        , 'light' : "#828ff9" }
-let s:palette.gui.aqua       = { 'dark' : "#ace6f0"        , 'light' : "#828ff9" }
-let s:palette.gui.blue       = { 'dark' : "#e94c80"        , 'light' : "#00005f" }
-let s:palette.gui.purple     = { 'dark' : "#ac96dc"        , 'light' : "#5f005f" }
-let s:palette.gui.window     = { 'dark' : "#0a001f"        , 'light' : "#9e9e9e" }
-let s:palette.gui.darkcolumn = { 'dark' : "#0a001f"        , 'light' : "#808080" }
-let s:palette.gui.addbg      = { 'dark' : "#e94c80"        , 'light' : "#d7ffd7" }
-let s:palette.gui.addfg      = { 'dark' : "#e94c80"        , 'light' : "#828ff9" }
-let s:palette.gui.changebg   = { 'dark' : "#9e9e9e"        , 'light' : "#e94c80" }
-let s:palette.gui.changefg   = { 'dark' : "#828ff9"        , 'light' : "#5f005f" }
-let s:palette.gui.delbg      = { 'dark' : "#e94c80"        , 'light' : "#ffd7d7" }
-let s:palette.gui.darkblue   = { 'dark' : "#828ff9"        , 'light' : "#d7ffd7" }
+let s:palette.gui.aqua       = { 'dark' : "#ace6f0"        , 'light' : "#ace6f0" }
+let s:palette.gui.blue       = { 'dark' : "#e94c80"        , 'light' : "#e94c80" }
+let s:palette.gui.purple     = { 'dark' : "#ac96dc"        , 'light' : "#ac96dc" }
+let s:palette.gui.window     = { 'dark' : "#0a001f"        , 'light' : "#0a001f" }
+let s:palette.gui.darkcolumn = { 'dark' : "#0a001f"        , 'light' : "#0a001f" }
+let s:palette.gui.addbg      = { 'dark' : "#e94c80"        , 'light' : "#e94c80" }
+let s:palette.gui.addfg      = { 'dark' : "#e94c80"        , 'light' : "#e94c80" }
+let s:palette.gui.changebg   = { 'dark' : "#9e9e9e"        , 'light' : "#9e9e9e" }
+let s:palette.gui.changefg   = { 'dark' : "#828ff9"        , 'light' : "#828ff9" }
+let s:palette.gui.delbg      = { 'dark' : "#e94c80"        , 'light' : "#e94c80" }
+let s:palette.gui.darkblue   = { 'dark' : "#828ff9"        , 'light' : "#828ff9" }
 let s:palette.gui.darkcyan   = { 'dark' : "#828ff9"        , 'light' : "#828ff9" }
-let s:palette.gui.darkred    = { 'dark' : "#5f0000"        , 'light' : "#d7d7ff" }
-let s:palette.gui.darkpurple = { 'dark' : "#e94c80"        , 'light' : "#5f005f" }
+let s:palette.gui.darkred    = { 'dark' : "#5f0000"        , 'light' : "#5f0000" }
+let s:palette.gui.darkpurple = { 'dark' : "#e94c80"        , 'light' : "#e94c80" }
 
 if exists("g:hybrid_custom_term_colors") && g:hybrid_custom_term_colors == 1
   "                              light dark
@@ -361,11 +361,11 @@ exe "hi! Statement"       .s:fg_blue        .s:bg_none        .s:fmt_none
 "   Conditional"
 "   Repeat"
 "   Label"
-exe "hi! Operator"        .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Operator"        .s:fg_red         .s:bg_none        .s:fmt_none
 "   Keyword"
 "   Exception"
 
-exe "hi! PreProc"         .s:fg_yellow        .s:bg_none        .s:fmt_none
+exe "hi! PreProc"         .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! Include"         .s:fg_yellow      .s:bg_none        .s:fmt_none
 "   Define"
 "   Macro"

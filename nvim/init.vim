@@ -28,9 +28,6 @@ set clipboard+=unnamedplus
     set shiftwidth=4
     set expandtab
 
-" auto convert tabs to spaces at file open
-    autocmd BufReadPost * :retab
-
 " removing white spaces
     autocmd BufWritePre * %s/\s\+$//e
 
@@ -122,7 +119,7 @@ hi CursorLine   cterm=NONE ctermbg=256
 hi CursorColumn cterm=NONE ctermbg=257
 nnoremap <Leader>b :set cursorline! <CR>
 
- "(Disable/enable) Local cursor line
+"(Disable/enable) Local cursor line at startup
 "augroup CursorLine
   "au!
   "au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
@@ -158,7 +155,7 @@ nnoremap <Leader>b :set cursorline! <CR>
 
 """NeoVide
 if exists("g:neovide")
-    set guifont="Inconsolata Nerd:h12"
+    set guifont="Inconsolata"
     "let g:neovide_transparency = 0.8
     let g:neovide_cursor_vfx_mode = "pixiedust"
 endif

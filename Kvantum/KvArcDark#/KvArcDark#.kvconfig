@@ -114,7 +114,7 @@ blur_only_active_window=false
 centered_forms=false
 kinetic_scrolling=false
 middle_click_scroll=false
-no_selection_tint=false
+no_selection_tint=true
 noninteger_translucency=false
 style_vertical_toolbars=false
 
@@ -190,7 +190,7 @@ text.focus.color=white
 
 [Focus]
 inherits=PanelButtonCommand
-frame=true
+frame=false
 frame.element=focus
 frame.top=1
 frame.bottom=1
