@@ -43,8 +43,8 @@ declare -a LIST_OF_WINDOW_TITLES_THAT_PREVENT_LOCKING=(
     "Zoom"
     "Google Meet"
     "Microsoft Teams"
-    #"Discord"
-    #"Slack"
+    "Discord"
+    "Slack"
     "Plex"
     "Kodi"
     "Jellyfish"
@@ -52,15 +52,10 @@ declare -a LIST_OF_WINDOW_TITLES_THAT_PREVENT_LOCKING=(
     "CCTV"
 )
 
-#for i in "${LIST_OF_WINDOW_TITLES_THAT_PREVENT_LOCKING[@]}"; do
-    #echo $i
-#done
-
 # Dependencies
 AWK=/bin/awk
 GREP=/bin/grep
 XPROP=/bin/xprop
-XWININFO=/bin/xwininfo
 
 # Find active window id
 get_active_id() {
