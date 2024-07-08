@@ -44,6 +44,7 @@ declare -a LIST_OF_WINDOW_TITLES_THAT_PREVENT_LOCKING=(
     "Google Meet"
     "Microsoft Teams"
     "Discord"
+    "Dino"
     "Slack"
     "Plex"
     "Kodi"
@@ -86,6 +87,11 @@ should_lock() {
 
     title=$(get_window_title $id)
     echo "Active window:$title"
+
+    if [[ $title =~ "st" ]]; then
+        echo "ST windows are not considered as a fullscreen window and will not prevent locking the screen"
+        return 0
+    fi
 
     if is_fullscreen $id; then
         echo "Fullscreen window detected:$title"

@@ -350,10 +350,6 @@
             "steam": true,
             "epic": false
         },
-        "Party mode 🎉": {
-            "enabled": false,
-            "superIntensePartyMode": 2
-        },
         "PermissionsViewer": {
             "enabled": true,
             "permissionsSortOrder": 0,
@@ -618,9 +614,6 @@
         "PictureInPicture": {
             "enabled": true
         },
-        "ServerProfile": {
-            "enabled": true
-        },
         "ThemeAttributes": {
             "enabled": true
         },
@@ -749,6 +742,37 @@
         },
         "VoiceDownload": {
             "enabled": false
+        },
+        "PartyMode": {
+            "enabled": false,
+            "superIntensePartyMode": 2
+        },
+        "ServerInfo": {
+            "enabled": true
+        },
+        "MessageUpdaterAPI": {
+            "enabled": true
+        },
+        "AppleMusicRichPresence": {
+            "enabled": false
+        },
+        "AutomodContext": {
+            "enabled": false
+        },
+        "CopyEmojiMarkdown": {
+            "enabled": false
+        },
+        "CustomIdle": {
+            "enabled": false
+        },
+        "DontRoundMyTimestamps": {
+            "enabled": false
+        },
+        "MaskedLinkPaste": {
+            "enabled": false
+        },
+        "UserSettingsAPI": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -761,6 +785,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1716116696065
+        "settingsSyncVersion": 1719574831489
     }
 }
