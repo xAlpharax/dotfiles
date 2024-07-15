@@ -57,8 +57,10 @@ xautolock -time 10 -locker lock &                                       # xautol
 syncthing serve --no-browser &>/dev/null &                              # start syncthing server
 
 eval $(dbus-launch --sh-syntax --exit-with-x11)                         # dbus session
-dbus-run-session pipewire &                                             # audio server
+pipewire &                                                              # audio server
 
 slstatus &                                                              # statusbar
 
-exec dbus-launch --exit-with-session dwm                                # window manager
+~/kekful_days/kekful_days.sh &                                                      # custom script
+
+exec dwm                                                                # window manager
