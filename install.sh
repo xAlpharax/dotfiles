@@ -38,7 +38,7 @@ _/_/_/      _/_/_/  _/    _/  _/_/_/  _/            _/
 
 "
 
-echo "Make sure that you have already gone through the voidinstall script provided by Void Linux."
+echo "Make sure that you have already gone through the void-installer script provided by Void Linux."
 
 echo "This script will install and configure a bunch of packages that I use for my usual setup."
 
@@ -59,7 +59,10 @@ echo ""
 
 echo "Updating package repositories and installing packages."
 
+sudo xbps-install -SAu void-repo-nonfree void-updates void-repo-multilib void-repo-multilib-nonfree
+
 # To get the package list: xbps-query -m | sed -E 's/(.*)-[0-9]+(\.[0-9]+)*(_[0-9]+)?/\1 \\/'
+# But it s pretty buggy on character after the backslash for whatever reason
 sudo xbps-install -SAu \
 7zip-unrar \
 CPU-X \
@@ -100,10 +103,9 @@ alsa-tools \
 alsa-tools-devel \
 alsa-utils \
 alsaequal \
-amdvlk \.Q2.3_1
-amdvlk-32bit \.Q2.3_1
+amdvlk \
+amdvlk-32bit \
 android-file-transfer-linux \
-android-studio \
 android-udev-rules \
 ansible \
 arc-icon-theme \
@@ -131,7 +133,6 @@ blender \
 blueman \
 bluez \
 bombardier \
-brave \
 bridge-utils \
 brother-brlaser \
 bsdtar \
@@ -140,7 +141,7 @@ btop \
 cairomm-devel \
 cargo \
 catdoc \
-catgirl \a_1
+catgirl \
 ccls \
 chromium \
 clamav \
@@ -149,7 +150,7 @@ clang-analyzer \
 cloc \
 cmake \
 cmark \
-cmark-gfm \.gfm.13_1
+cmark-gfm \
 cmatrix \
 console-setup \
 croc \
@@ -194,7 +195,7 @@ firefox \
 flatpak \
 flowblade \
 foliate \
-font-adobe-source-code-pro \R~ro+1.058R~it+1.018R~VAR_1
+font-adobe-source-code-pro \
 font-awesome \
 font-awesome6 \
 font-cozette \
@@ -321,7 +322,6 @@ liberation-fonts-ttf \
 libexif-devel \
 libgcc-32bit \
 libgfortran-devel \
-libglib-static-32bit \
 libglvnd-32bit \
 libgo-32bit \
 libgo-devel-32bit \
@@ -332,7 +332,6 @@ libgta \
 libgta-devel \
 libgtkdgl-32bit \
 libgtkdsv-32bit \
-libgtkhtml-32bit \
 libguestfs \
 libinput-gestures \
 libjack-pipewire \
@@ -438,9 +437,9 @@ openblas-devel \
 openbsd-netcat \
 opencv \
 opencv4 \
-openjdk \u999_1
-openjdk-jre \u999_1
-openjdk17 \+9_1
+openjdk \
+openjdk-jre \
+openjdk17 \
 opus-tools \
 outguess \
 p7zip \
@@ -562,7 +561,7 @@ thunderbird \
 timg \
 tio \
 tk-devel \
-tldr \.alpha_3
+tldr \
 tlp \
 tmux \
 torbrowser-launcher \
@@ -582,7 +581,6 @@ virt-viewer \
 vkBasalt \
 vkBasalt-32bit \
 vkQuake \
-vkd3d-32bit \
 void-docs \
 void-docs-browse \
 void-repo-multilib \
@@ -593,7 +591,7 @@ vokoscreen \
 vpm \
 vscode \
 vsv \
-w3m \+git20230121_2
+w3m \
 waifu2x-converter-cpp \
 webp-pixbuf-loader \
 wget \
@@ -625,7 +623,7 @@ xmenu \
 xmirror \
 xorg \
 xorg-server-devel \
-xoris \e_3
+xoris \
 xournal \
 xscreensaver \
 xsecurelock \
