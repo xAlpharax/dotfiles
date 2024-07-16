@@ -263,6 +263,7 @@ gstreamer-vaapi \
 gstreamer1-aravis \
 gstreamer1-pipewire \
 gstreamermm \
+nerd-fonts \
 gtk+3-devel \
 gtk-engine-murrine-32bit \
 gtklp
@@ -417,7 +418,6 @@ nemesis \
 neofetch \
 neomutt \
 neovim \
-nerd-fonts \
 netbsd-wtf \
 newsboat \
 nfs-utils \
