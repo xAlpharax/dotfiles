@@ -265,7 +265,9 @@ gstreamer1-pipewire \
 gstreamermm \
 gtk+3-devel \
 gtk-engine-murrine-32bit \
-gtklp \
+gtklp
+
+sudo xbps-install -SAu \
 hashcat \
 hashcat-utils \
 hdf5-devel \
@@ -463,13 +465,14 @@ powertop \
 ppp \
 profanity \
 protontricks \
-pulsemixer \
+pulsemixer
+
+sudo xbps-install -SAu \
 pyside2-tools \
 python3-Markdown \
 python3-cairo-devel \
 python3-cairocffi \
 python3-cchardet \
-python3-commonmark \
 python3-cycler \
 python3-dbus-devel \
 python3-devel \
