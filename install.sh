@@ -59,14 +59,16 @@ echo ""
 
 echo "Updating package repositories and installing packages."
 
+sudo xbps-install -SAu
+
 sudo xbps-install -SAu void-repo-nonfree void-updates void-repo-multilib void-repo-multilib-nonfree
 
-# To get the package list: xbps-query -m | sed -E 's/(.*)-[0-9]+(\.[0-9]+)*(_[0-9]+)?/\1 \\/'
-# But it s pretty buggy on character after the backslash for whatever reason
+# To get the package list: xpkg -m | xargs -n 1 | xsel -b
 sudo xbps-install -SAu \
 7zip-unrar \
 CPU-X \
 Ghidrathon \
+GraphicsMagick \
 ImageMagick \
 MangoHud \
 Minder \
@@ -74,6 +76,9 @@ MultiMarkdown \
 PopCorn \
 RcloneBrowser \
 SDL \
+SDL2-devel \
+SDL2_ttf \
+SDL2_ttf-devel \
 SDL_image \
 SFML \
 SFML-devel \
@@ -105,6 +110,7 @@ alsa-utils \
 alsaequal \
 amdvlk \
 amdvlk-32bit \
+amfora \
 android-file-transfer-linux \
 android-udev-rules \
 ansible \
@@ -114,6 +120,7 @@ ardour \
 arduino-cli \
 aria2 \
 arp-scan \
+arpfox \
 artwiz-fonts \
 ascii \
 asciinema \
@@ -185,6 +192,7 @@ ext4magic \
 extundelete \
 fail2ban \
 fann \
+fbv \
 fd \
 feh \
 ffmpeg \
@@ -193,7 +201,6 @@ figlet-fonts \
 filezilla \
 firefox \
 flatpak \
-flowblade \
 foliate \
 font-adobe-source-code-pro \
 font-awesome \
@@ -263,12 +270,9 @@ gstreamer-vaapi \
 gstreamer1-aravis \
 gstreamer1-pipewire \
 gstreamermm \
-nerd-fonts \
 gtk+3-devel \
 gtk-engine-murrine-32bit \
-gtklp
-
-sudo xbps-install -SAu \
+gtklp \
 hashcat \
 hashcat-utils \
 hdf5-devel \
@@ -288,6 +292,7 @@ icu-devel \
 imlib2-devel \
 imlib2-tools \
 imlib2-webp \
+inetutils \
 inetutils-ifconfig \
 inkscape \
 inxi \
@@ -303,7 +308,9 @@ jupyterlab \
 kakoune \
 keepassxc \
 kicad \
+kompare \
 kotlin-bin \
+krfb \
 krita \
 kvantum \
 lagrange \
@@ -325,6 +332,7 @@ liberation-fonts-ttf \
 libexif-devel \
 libgcc-32bit \
 libgfortran-devel \
+libglib-static-32bit \
 libglvnd-32bit \
 libgo-32bit \
 libgo-devel-32bit \
@@ -335,6 +343,7 @@ libgta \
 libgta-devel \
 libgtkdgl-32bit \
 libgtkdsv-32bit \
+libgtkhtml-32bit \
 libguestfs \
 libinput-gestures \
 libjack-pipewire \
@@ -386,7 +395,6 @@ luarocks \
 lutris \
 macchanger \
 mandown \
-mangadesk \
 mathjax \
 mdp \
 mdr \
@@ -418,6 +426,7 @@ nemesis \
 neofetch \
 neomutt \
 neovim \
+nerd-fonts \
 netbsd-wtf \
 newsboat \
 nfs-utils \
@@ -453,6 +462,7 @@ pass \
 pass-otp \
 pavucontrol \
 pcmanfm \
+persepolis \
 picom \
 pipewire \
 pipewire-devel \
@@ -465,14 +475,13 @@ powertop \
 ppp \
 profanity \
 protontricks \
-pulsemixer
-
-sudo xbps-install -SAu \
+pulsemixer \
 pyside2-tools \
 python3-Markdown \
 python3-cairo-devel \
 python3-cairocffi \
 python3-cchardet \
+python3-commonmark \
 python3-cycler \
 python3-dbus-devel \
 python3-devel \
@@ -534,6 +543,7 @@ socklog \
 socklog-void \
 spectrum3d \
 speedometer \
+starplot \
 steam \
 stegsnow \
 stow \
@@ -584,6 +594,7 @@ virt-viewer \
 vkBasalt \
 vkBasalt-32bit \
 vkQuake \
+vkd3d-32bit \
 void-docs \
 void-docs-browse \
 void-repo-multilib \
@@ -657,8 +668,10 @@ zulucrypt
 
 echo ""
 
-echo "Loading config files for important applications..."
+echo "Increasing max_map_count ..."
+sudo sysctl -w vm.max_map_count=1048576
+sysctl vm.max_map_count
 
-echo ""
+echo "Loading config files for important applications..."
 
 # i will use move, copy, link, etc commands with their verbose options to show what is being done.

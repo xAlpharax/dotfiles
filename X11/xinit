@@ -47,7 +47,7 @@ synclient AccelFactor=0.025                                             # accele
 
 amixer --card 0 set 'Master' 100 &                                      # audio volume
 amixer --card 0 set 'Mic Boost' 0 &                                     # mic boost volume
-amixer --card 0 set 'Capture' 39 &                                      # capture volume
+#amixer --card 0 set 'Capture' 39 &                                      # capture volume
 
 sxhkd -c $HOME/.config/keybinds &                                       # keybindings
 

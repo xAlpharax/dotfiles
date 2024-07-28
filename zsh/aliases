@@ -74,7 +74,7 @@ alias catgirl="catgirl -h irc.libera.chat -j '#voidlinux'"
 
 # gaming
 alias proton='~/.local/share/Steam/steamapps/common/Proton\ -\ Experimental/proton run'
-alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton9-9/proton run'
+alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton9-10/proton run'
 
 # media
 alias mpv='mpv --ytdl-format="bestvideo[ext=mp4]+bestaudio[ext=m4a]"'

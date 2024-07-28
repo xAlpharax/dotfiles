@@ -135,8 +135,8 @@ nnoremap <Leader>b :set cursorline! <CR>
     nnoremap <leader>\ :NERDTreeToggle<CR>
 
     " Start NERDTree. If a file is specified, move the cursor to its window.
-"    autocmd StdinReadPre * let s:std_in=1
-"    autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+    "autocmd StdinReadPre * let s:std_in=1
+    "autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
     " Exit Vim if NERDTree is the only window left.
     autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -156,6 +156,7 @@ nnoremap <Leader>b :set cursorline! <CR>
 """NeoVide
 if exists("g:neovide")
     set guifont="Inconsolata"
-    "let g:neovide_transparency = 0.8
+    let g:neovide_transparency = 0.75
+    let g:airline_powerline_fonts = 0
     let g:neovide_cursor_vfx_mode = "pixiedust"
 endif

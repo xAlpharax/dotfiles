@@ -10,7 +10,6 @@ case $doVAR in
     "");;
     "dwmkill")
         pkill dwm;;
-        #pkill xinit;;
     "picomkill")
         pkill picom;;
     "sleeeeeeep")

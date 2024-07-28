@@ -2,7 +2,7 @@
 
 set -e
 
-/home/alphara/.applications/AppImageUpdate-x86_64.AppImage $@
-/home/alphara/.applications/appimageupdatetool-x86_64.AppImage $@
+#/home/alphara/.applications/AppImageUpdate-x86_64.AppImage $@ # GUI
+/home/alphara/.applications/appimageupdatetool-x86_64.AppImage $@ # CLI
 
 rm ./*.zs-old

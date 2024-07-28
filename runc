@@ -4,7 +4,7 @@ set -e
 
 g++ $1 -o temp
 
-chmod +x temp
+chmod +x temp # if it isn't already executable
 
 ./temp
 
