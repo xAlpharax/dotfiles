@@ -14,6 +14,7 @@ alias lc="wc -l"
 alias du='du -sh'
 alias df='df -h'
 alias cl='clear'
+alias cd='z'
 
 alias mkdir="mkdir -pv"
 alias cp="cp -v"

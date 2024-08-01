@@ -222,6 +222,7 @@ fortune-mod-anarchism \
 fortune-mod-de \
 fortune-mod-void \
 freecad \
+fsv \
 fuse-devel \
 fuse-sshfs \
 fuse3 \
@@ -246,6 +247,7 @@ gimp \
 git \
 github-cli \
 gitui \
+glava \
 glib-devel \
 glmark2 \
 glxinfo \
@@ -323,7 +325,6 @@ libXrandr-32bit \
 libXrandr-devel \
 libXrandr-devel-32bit \
 libXtst-32bit \
-libclang-cpp15 \
 libcurl-devel \
 libdazzle \
 libdca \
@@ -397,7 +398,6 @@ macchanger \
 mandown \
 mathjax \
 mdp \
-mdr \
 mediainfo \
 mesa-32bit \
 mesa-ati-dri \
@@ -671,6 +671,8 @@ echo ""
 echo "Increasing max_map_count ..."
 sudo sysctl -w vm.max_map_count=1048576
 sysctl vm.max_map_count
+
+echo ""
 
 echo "Loading config files for important applications..."
 
