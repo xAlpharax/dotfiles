@@ -38,24 +38,6 @@ alt + shift + e
 alt + shift + BackSpace
     lock
 
-### HARDWARE KEYS ###
-
-# brightness control
-
-XF86MonBrightnessDown
-    sudo backlight 0
-
-XF86MonBrightnessUp
-    sudo backlight 255
-
-# volume control
-XF86Audio{Raise,Lower}Volume
-    amixer --card 0 set Master 1%{+,-}
-
-# mute audio output control
-XF86AudioMute
-    [ $(amixer --card 0 get Master | tail -n 1 | sed -E 's/.*.\[//g' | cut -c1-2) = "on" ] && amixer --card 0 set Master mute || amixer --card 0 set Master unmute
-
 ### APPLICATIONS ###
 
 # Firefox
@@ -82,3 +64,21 @@ alt + d
 
 alt + shift + d
     dino
+
+### HARDWARE KEYS ###
+
+# brightness control
+
+XF86MonBrightnessDown
+    sudo backlight 0
+
+XF86MonBrightnessUp
+    sudo backlight 255
+
+# volume control
+XF86Audio{Raise,Lower}Volume
+    amixer --card 0 set Master 1%{+,-}
+
+# mute audio output control
+XF86AudioMute
+    [ $(amixer --card 0 get Master | tail -n 1 | sed -E 's/.*.\[//g' | cut -c1-2) = "on" ] && amixer --card 0 set Master mute || amixer --card 0 set Master unmute
