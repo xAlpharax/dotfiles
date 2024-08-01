@@ -14,4 +14,4 @@ Personal forks of [Suckless Utilities](https://suckless.org/) can be found in th
 
 ## Visuals / Rice
 
-![image](https://github.com/xAlpharax/dotfiles/assets/42233094/0e1d1e4c-3f7c-452b-b8eb-d731fe71cb54)
+![image](https://github.com/user-attachments/assets/d7e356e8-13b5-4b94-a1fd-4f18dde1db8b)
