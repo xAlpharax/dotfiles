@@ -275,6 +275,7 @@ gstreamermm \
 gtk+3-devel \
 gtk-engine-murrine-32bit \
 gtklp \
+gtypist \
 hashcat \
 hashcat-utils \
 hdf5-devel \
