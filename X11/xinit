@@ -13,7 +13,7 @@ xrandr -s 1920x1080 -r 144 &        # target screen resolution
 xset r rate 300 30 &                # key repeat delay and speed
 
 xrdb merge ~/.Xresources            # asset resources
-picom &                             # compositor
+picom --backend glx &               # compositor
 
 #                  #
 # ## more stuff ## #
@@ -47,7 +47,7 @@ synclient AccelFactor=0.025                                             # accele
 
 amixer --card 0 set 'Master' 100 &                                      # audio volume
 amixer --card 0 set 'Mic Boost' 0 &                                     # mic boost volume
-#amixer --card 0 set 'Capture' 39 &                                      # capture volume
+amixer --card 0 set 'Capture' 63 &                                      # capture volume # 39
 
 sxhkd -c $HOME/.config/keybinds &                                       # keybindings
 
@@ -61,6 +61,6 @@ pipewire &                                                              # audio 
 
 slstatus &                                                              # statusbar
 
-~/kekful_days/kekful_days.sh &                                                      # custom script
+~/kekful_days/kekful_days.sh &                                          # custom script
 
 exec dwm                                                                # window manager

@@ -23,7 +23,7 @@ lock_screen() {
 
     xsecurelock
 
-    picom &
+    picom --backend glx &
 }
 
 # Settings

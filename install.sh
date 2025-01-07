@@ -64,6 +64,8 @@ sudo xbps-install -SAu
 sudo xbps-install -SAu void-repo-nonfree void-updates void-repo-multilib void-repo-multilib-nonfree
 
 # To get the package list: xpkg -m | xargs -n 1 | xsel -b
+# PROBLEMS: libglib-static-32bit, libgtkhtml, vkd3d-32bit
+# SOLUTIONS: remove them from the list
 sudo xbps-install -SAu \
 7zip-unrar \
 CPU-X \
@@ -334,7 +336,6 @@ liberation-fonts-ttf \
 libexif-devel \
 libgcc-32bit \
 libgfortran-devel \
-libglib-static-32bit \
 libglvnd-32bit \
 libgo-32bit \
 libgo-devel-32bit \
@@ -345,7 +346,6 @@ libgta \
 libgta-devel \
 libgtkdgl-32bit \
 libgtkdsv-32bit \
-libgtkhtml-32bit \
 libguestfs \
 libinput-gestures \
 libjack-pipewire \
@@ -595,7 +595,6 @@ virt-viewer \
 vkBasalt \
 vkBasalt-32bit \
 vkQuake \
-vkd3d-32bit \
 void-docs \
 void-docs-browse \
 void-repo-multilib \

@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/alphara/.zsh/completions:"* ]]; then export FPATH="/home/alphara/.zsh/completions:$FPATH"; fi
 zstyle ':completion:*' menu select
 zstyle :compinstall filename '~/.zshrc'
 
@@ -54,4 +56,8 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# slow af
+#eval "$(gh copilot alias -- zsh)"
+
 eval "$(zoxide init zsh)"
+. "/home/alphara/.deno/env"

@@ -29,7 +29,10 @@ export GOPATH=$HOME/.local/go
 export NO_AT_BRIDGE=1
 
 ### paths ###
-export PATH=/bin:/sbin/:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/alphara/.local/bin:/home/alphara/.cargo/bin:/home/alphara/exfatssd/IEUCYS/flutter/bin:/usr/local/go/bin:/home/alphara/.pub-cache/bin:/home/alphara/dev/dotnet
+export PATH=/bin:/sbin/:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/alphara/.local/bin:/home/alphara/.cargo/bin::/usr/local/go/bin:/home/alphara/.pub-cache/bin:/home/alphara/dev/dotnet:/home/alphara/exfatssd/IEUCYS/flutter/bin:/usr/lib/jvm/openjdk17/bin
+
+## for latexocr
+export SCREENSHOT_TOOL=gnome-screenshot
 
 ### XDG ###
 ##export XDG_DATA_DIRS=/home/alphara/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
@@ -74,6 +77,6 @@ export QT_STYLE_OVERRIDE=kvantum
 
 ### cuda & ML ###
 export PATH=$PATH:/usr/local/cuda-11.7/bin
-export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:/usr/local/cuda-11.7/lib64
+export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:/usr/local/cuda-11.7/lib64:/usr/lib/qt6/lib
 
 TORCH_CUDA_ARCH_LIST="8.6"
