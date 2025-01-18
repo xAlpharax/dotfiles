@@ -17,5 +17,6 @@ case $doVAR in
     "rebooooooot")
         sudo reboot;;
     "poweroff")
-        sudo poweroff;;
+        #sudo poweroff;;
+        sudo shutdown -h now;;
 esac
