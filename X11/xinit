@@ -63,4 +63,6 @@ slstatus &                                                              # status
 
 ~/kekful_days/kekful_days.sh &                                          # custom script
 
+setxkbmap -option caps:escape &                                         # set caps to esc
+
 exec dwm                                                                # window manager
