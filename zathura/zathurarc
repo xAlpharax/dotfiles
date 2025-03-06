@@ -13,3 +13,63 @@ set incremental-search true
 
 # Hide the toolbar at startup
 set guioptions none
+
+# Navigation
+map u scroll half-up
+map d scroll half-down
+
+# Zoom
+map K zoom in
+map J zoom out
+
+# Document Control
+map r reload
+map R rotate
+map p print
+map D toggle_page_mode
+
+# Font Setting
+set font 'Inconsolata Normal 14'
+#set font 'monospace normal 14'
+
+# LaTeX Synctex Support
+# Uncomment the line below if you use Zathura for LaTeX PDFs and want synctex support
+set synctex true
+
+# COLORS
+
+#set recolor
+set recolor-lightcolor \#0a001f
+set recolor-darkcolor \#ace6f0
+#set recolor-keephue
+set default-bg \#0a001f
+set default-fg \#ace6f0
+
+set statusbar-fg \#ace6f0
+set statusbar-bg \#0a001f
+set inputbar-fg \#ace6f0
+set inputbar-bg \#0a001f
+set notification-error-bg \#0a001f
+set notification-error-fg \#ace6f0
+set notification-warning-bg \#0a001f
+set notification-warning-fg \#ace6f0
+set notification-bg \#0a001f
+set notification-fg \#ace6f0
+set index-bg \#0a001f
+set index-fg \#ace6f0
+set index-active-bg \#0a001f
+set index-active-fg \#ace6f0
+set render-loading-bg \#0a001f
+set render-loading-fg \#ace6f0
+set completion-bg \#0a001f
+set completion-fg \#ace6f0
+set completion-group-bg \#0a001f
+set completion-group-fg \#ace6f0
+set completion-highlight-bg \#0a001f
+set completion-highlight-fg \#ace6f0
+set completion-bg \#0a001f
+set completion-fg \#ace6f0
+
+#set highlight-color \#ace6f0
+
+set recolor-reverse-video true # true = show images normally, false = invert colors with color hue

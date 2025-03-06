@@ -8,10 +8,12 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export COLORTERM="truecolor"
 export BROWSER="brave"
+export TERMBROWSER="brave"
 export CHROME_EXECUTABLE="chromium"
-export TERM="st-256color"
-export TERMINAL="st-256color"
-export TERMINAL_PROG="st-256color"
+export TERM="st"
+export TERMINAL="st"
+export TERMINAL_PROG="st"
+export READER="zathura"
 
 export BAT_THEME="base16"
 
@@ -76,7 +78,7 @@ export QT_STYLE_OVERRIDE=kvantum
 # default aim is 1024/48000 21.33 ms and my system defaults to aim to 4/48000 0.08 ms
 
 ### cuda & ML ###
-export PATH=$PATH:/usr/local/cuda-11.7/bin
-export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:/usr/local/cuda-11.7/lib64:/usr/lib/qt6/lib
+export PATH=$PATH:/usr/local/cuda-12.4/bin
+export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:/usr/local/cuda-12.4/bin:/usr/lib/qt6/lib
 
 TORCH_CUDA_ARCH_LIST="8.6"

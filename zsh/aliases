@@ -61,12 +61,13 @@ alias vis='python $scriptdir/vis.py'
 
 # aesthetic
 alias filmelematrix='cmatrix -C red -a'
-alias colorfetch='neofetch --block_range 0 15'
+#alias colorfetch='neofetch --block_range 0 15'
 alias change-bg='feh --bg-fill --no-fehbg'
 alias clock='tty-clock -Dc -C 4'
 alias sens='watch -n 0.1 sensors'
 alias htopr='htop -C -U'
 alias sxiv='sxiv -bpqra'
+alias nsxiv='sxiv -bpqra'
 
 # tools
 alias zathura='zathura 2>/dev/null'

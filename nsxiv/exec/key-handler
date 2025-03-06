@@ -1,0 +1,52 @@
+#!/bin/sh
+
+# you use these inside nsxiv with Ctrl+x and then the key for an action
+
+# w: set as wallpaper
+# c: copy File
+# m: move file
+# r: rotate 90 degrees
+# R: rotate -90 degrees
+# f: flip
+# y: copy file path to clipboard
+# Y: copy file path to clipboard with full path
+# d: delete File
+# g: open with gimp
+# k: open with krita
+# i: show file information
+
+dmenu_config=$(bash ~/.config/dmenu.conf)
+
+while read -r file
+do
+case "$1" in
+    "w") feh --bg-fill --no-fehbg "$file" & ;;
+    "c")
+		[ -z "$destdir" ] && destdir="$(sed "s/#.*$//;/^\s*$/d" ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | awk '{print $2}' | $dmenu_config -l 20 -i -p "Copy file(s) to where?" | sed "s|~|$HOME|g")"
+		[ ! -d "$destdir" ] && notify-send "$destdir is not a directory, cancelled." && exit
+		cp "$file" "$destdir" && notify-send -i "$(readlink -f "$file")" "$file copied to $destdir." &
+		;;
+    "m")
+		[ -z "$destdir" ] && destdir="$(sed "s/#.*$//;/^\s*$/d" ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | awk '{print $2}' | $dmenu_config -l 20 -i -p "Move file(s) to where?" | sed "s|~|$HOME|g")"
+		[ ! -d "$destdir" ] && notify-send "$destdir is not a directory, cancelled." && exit
+		mv "$file" "$destdir" && notify-send -i "$(readlink -f "$file")" "$file moved to $destdir." &
+		;;
+	"r")
+		magick "$file" -rotate 90 "$file" ;;
+	"R")
+		magick "$file" -rotate -90 "$file" ;;
+	"f")
+		magick "$file" -flop "$file" ;;
+	"y")
+		printf "%s" "$file" | tr -d '\n' | xclip -selection clipboard &&
+		notify-send "$file copied to clipboard" & ;;
+	"Y")
+		readlink -f "$file" | tr -d '\n' | xclip -selection clipboard &&
+			notify-send "$(readlink -f "$file") copied to clipboard" & ;;
+	"d")
+		[ "$(printf "No\\nYes" | $dmenu_config -i -p "Really delete $file?")" = "Yes" ] && rm "$file" && notify-send "$file deleted." ;;
+	"g")	setsid -f gimp "$file" ;;
+	"k")	setsid -f krita "$file" ;;
+	"i")	notify-send "File information" "$(mediainfo "$file" | sed "s/[ ]\+:/:/g;s/: /: <b>/;s/$/<\/b>/" | grep "<b>")" ;;
+esac
+done

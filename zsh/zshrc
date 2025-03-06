@@ -1,44 +1,61 @@
+# Ensure this zshrc is only sourced in interactive shells
+[[ $- != *i* ]] && return
+
 # Add deno completions to search path
 if [[ ":$FPATH:" != *":/home/alphara/.zsh/completions:"* ]]; then export FPATH="/home/alphara/.zsh/completions:$FPATH"; fi
+
+# Completion settings
 zstyle ':completion:*' menu select
 zstyle :compinstall filename '~/.zshrc'
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*' # More forgiving completion matching
 
 autoload -Uz compinit
 zmodload zsh/complist
-
 compinit
 _comp_options+=(globdots)
 
+# History settings
 HISTFILE=~/.histfile
 HISTSIZE=1000000
 SAVEHIST=1000000
+setopt appendhistory hist_ignore_all_dups extendedglob autocd
+unsetopt beep # Disable beep
 
-setopt appendhistory hist_ignore_dups extendedglob autocd
+# --- Keybindings ---
+bindkey -v # Enable vi keybindings
 
-unsetopt beep
-
-bindkey -v
-
+# Vi-mode navigation in menu completion
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
+bindkey -v '^?' backward-delete-char # Fix backspace in vi mode
+bindkey -s '^z' 'fg\n' # Ctrl+Z to bring background job to foreground
+bindkey -M vicmd 'L' edit-command-line # 'L' in vi command mode to edit command line
+
+# --- Aliases and Environment Variables ---
 source $HOME/.config/zsh/aliases
 source $HOME/.config/zsh/env
 
+# --- Prompt ---
 autoload -Uz promptinit
 PROMPT_EOL_MARK=""
 promptinit
-
 PROMPT='%B%F{3}%n@%m %~>%b%f '
 
+# --- Plugins ---
+# History substring search with / in normal mode, like in Vim
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+# Auto-Completion + Syntax highlighting (comment if not needed)
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=blue' # Highlight unknown tokens in blue (red in my colorscheme)
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=green,bold' # Highlight the first argument in bold green (blue in my colorscheme)
+
 ############################################
-
 # vi mode
-
 function zle-keymap-select () {
     case $KEYMAP in
         vicmd) echo -ne '\e[1 q';;      # beam
@@ -46,18 +63,15 @@ function zle-keymap-select () {
     esac
 }
 zle -N zle-keymap-select
-
 ############################################
 
 stty tabs
 
+# --- Version Managers and Tools ---
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
-# slow af
-#eval "$(gh copilot alias -- zsh)"
 
 eval "$(zoxide init zsh)"
 . "/home/alphara/.deno/env"

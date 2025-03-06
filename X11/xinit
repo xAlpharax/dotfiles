@@ -61,7 +61,7 @@ pipewire &                                                              # audio 
 
 slstatus &                                                              # statusbar
 
-~/kekful_days/kekful_days.sh &                                          # custom script
+~/dev/kekful_days/kekful_days.sh &                                      # custom script
 
 setxkbmap -option caps:escape &                                         # set caps to esc
 
