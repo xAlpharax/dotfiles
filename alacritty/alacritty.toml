@@ -4,42 +4,30 @@
 
 # Font configuration
 [font]
-size = 12
 
-# Normal font
-[font.normal]
-family = "Inconsolata"
-style = "Regular"
+size = 13
 
-# Bold font
-[font.bold]
-family = "Inconsolata"
-style = "Bold"
+  [font.normal]
+  family = "Inconsolata"
 
-# Italic font
-[font.italic]
-family = "Inconsolata"
-style = "Italic"
+  [font.bold]
+  family = "Inconsolata"
 
-# Bold italic font
-[font.bold_italic]
-family = "Inconsolata"
-style = "Bold Italic"
-
-# Glyph offset (no change from default, but included for completeness)
-[font.glyph_offset]
-x = 0
-y = 0
+  # Glyph offset (no change from default, but included for completeness)
+  [font.glyph_offset]
+  x = 0
+  y = 0
 
 # Window configuration
 [window]
+
 # Startup opacity (transparency)
 opacity = 0.75
 
-# Window padding (borderpx = 0 means no padding)
+# Window padding
 padding = { x = 0, y = 0 }
 
-# Decorations (no decorations by default, similar to borderless st)
+# Decorations
 decorations = "none" # or "full", "transparent", "buttonless"
 
 # Shell configuration
@@ -48,56 +36,42 @@ program = "/bin/zsh"
 
 # Colors configuration
 [colors]
-# Default colors
-[colors.primary]
-background = "#0a001f"
-foreground = "#d9d5e6"
 
-# Cursor colors
-[colors.cursor]
-text = "#d9d5e6"
-cursor = "#d9d5e6"
+  # Default colors
+  [colors.primary]
+  background = "#0a001f"
+  foreground = "#d9d5e6"
 
-# Normal colors
-[colors.normal]
-black   = "#828ff9"
-red     = "#6740ba"
-green   = "#828ff9"
-yellow  = "#ac96dc"
-blue    = "#e94c80"
-magenta = "#ace6f0"
-cyan    = "#6740ba"
-white   = "#eebea4"
+  # Cursor colors
+  [colors.cursor]
+  text = "#0a001f"
+  cursor = "#d9d5e6"
 
-# Bright colors
-[colors.bright]
-black   = "#828ff9"
-red     = "#6740ba"
-green   = "#828ff9"
-yellow  = "#ac96dc"
-blue    = "#e94c80"
-magenta = "#ace6f0"
-cyan    = "#6740ba"
-white   = "#ace6f0"
+  # Normal colors
+  [colors.normal]
+  black   = "#828ff9"
+  red     = "#6740ba"
+  green   = "#828ff9"
+  yellow  = "#ac96dc"
+  blue    = "#e94c80"
+  magenta = "#ace6f0"
+  cyan    = "#6740ba"
+  white   = "#eebea4"
 
-# Terminal bell
-[bell]
-animation = "Ease" # Visual bell animation
-duration = 50     # Visual bell duration in milliseconds
-color = "0xffffff" # Visual bell color
-# sound = "Bell"   # Uncomment to enable sound bell (requires 'Bell' sound theme)
-# command = "..."  # Uncomment to execute a command on bell
-
-
-# Terminal behavior
-[terminal]
-# Tab spaces (tabspaces = 4)
-# tab_stop_width = 4
-
+  # Bright colors
+  [colors.bright]
+  black   = "#828ff9"
+  red     = "#6740ba"
+  green   = "#828ff9"
+  yellow  = "#ac96dc"
+  blue    = "#e94c80"
+  magenta = "#ace6f0"
+  cyan    = "#6740ba"
+  white   = "#ace6f0"
 
 # Cursor style
 [cursor]
-# Cursor thickness (cursorshape = 6 is block cursor, thickness is relative to cell width)
+
 style = { shape = "Beam", blinking = "Never" } # Changed to Beam for line cursor
-thickness = 0.15 # Adjusted thickness for beam cursor, st's default is thin line
-blink_interval = 800
+
+thickness = 0.25 # Adjusted thickness for beam cursor, st's default is thin line
