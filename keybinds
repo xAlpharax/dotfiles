@@ -40,7 +40,7 @@ alt + shift + BackSpace
 
 ### APPLICATIONS ###
 
-# Firefox
+# Firefox (this didn't age well)
 
 alt + f
     firefox
@@ -49,6 +49,11 @@ alt + f
 
 alt + shift + f
     brave
+
+# Chromium (dev testing)
+
+alt + shift + c
+    chromium
 
 # LibreWolf
 
@@ -65,20 +70,27 @@ alt + d
 alt + shift + d
     dino
 
+# Pcmanfm (Explorer / File Manager)
+
+alt + e
+    pcmanfm
+
 ### HARDWARE KEYS ###
 
 # brightness control
 
 XF86MonBrightnessDown
-    sudo backlight 0
+    notify-send --replace-id=1 "🌑 Brightness Down" && sudo backlight 0 # Moon Emoji
 
 XF86MonBrightnessUp
-    sudo backlight 255
+    notify-send --replace-id=1 "🌞 Brightness Up" && sudo backlight 255 # Sun Emoji
 
 # volume control
+
 XF86Audio{Raise,Lower}Volume
-    amixer --card 0 set Master 1%{+,-}
+    amixer --card 0 set Master 1%{+,-} && notify-send --replace-id=2 "🔊 Volume $(amixer --card 0 get Master | tail -n 1 | sed 's/.*Playback [0-9]\+ \[\([0-9]\+%\)\].*/\1/')"
 
 # mute audio output control
+
 XF86AudioMute
-    [ $(amixer --card 0 get Master | tail -n 1 | sed -E 's/.*.\[//g' | cut -c1-2) = "on" ] && ( notify-send "🔇 Muted" && amixer --card 0 set Master mute ) || ( amixer --card 0 set Master unmute && notify-send "📢 Unmuted" )
+    [ $(amixer --card 0 get Master | tail -n 1 | sed -E 's/.*.\[//g' | cut -c1-2) = "on" ] && ( notify-send --replace-id=3 "🔇 Muted" && amixer --card 0 set Master mute ) || ( amixer --card 0 set Master unmute && notify-send --replace-id=3 "📢 Unmuted" )

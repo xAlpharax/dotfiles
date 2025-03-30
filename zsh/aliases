@@ -28,7 +28,7 @@ alias m="make -j`nproc`"
 alias mc="make clean"
 
 alias hd='hexdump -C'
-alias tmux="tmux new -A"
+alias tmux="tmux new -A -s main"
 alias am='alsamixer --card 0'
 alias x='cd ~ ; startx'
 alias vim='nvim'
@@ -77,7 +77,7 @@ alias catgirl="catgirl -h irc.libera.chat -j '#voidlinux'"
 
 # gaming
 alias proton='~/.local/share/Steam/steamapps/common/Proton\ -\ Experimental/proton run'
-alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton9-25/proton run'
+alias protonge='~/.local/share/Steam/compatibilitytools.d/GE-Proton9-26/proton run'
 
 # media
 alias mpv='mpv --ytdl-format="bestvideo[ext=mp4]+bestaudio[ext=m4a]"'

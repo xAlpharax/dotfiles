@@ -5,7 +5,7 @@
 # Font configuration
 [font]
 
-size = 13
+size = 9 # 13
 
   [font.normal]
   family = "Inconsolata"
