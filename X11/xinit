@@ -11,6 +11,7 @@ xrandr --output HDMI-1-0 --mode 1920x1080 -r 240 &
 
 xrandr -s 1920x1080 -r 144 &        # target screen resolution
 xset r rate 300 30 &                # key repeat delay and speed
+xset b off                          # disable bell
 
 xrdb merge ~/.Xresources            # asset resources
 picom --backend glx &               # compositor

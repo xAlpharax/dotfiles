@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Alphara's Dark Theme",
+  "version": "1.0.0",
+  "description": "A custom dark theme using blue and purple colors.",
+  "theme": {
+    "colors": {
+      "background_tab": [ 10, 0, 31 ],
+      "background_tab_inactive": [ 10, 0, 31 ],
+      "bookmark_text": [ 172, 230, 240 ],
+      "frame": [ 0, 0, 0 ],
+      "frame_inactive": [ 0, 0, 0 ],
+      "ntp_background": [ 10, 0, 31 ],
+      "ntp_link": [ 172, 230, 240 ],
+      "ntp_text": [ 172, 230, 240 ],
+      "omnibox_background": [ 10, 0, 31 ],
+      "omnibox_text": [ 172, 230, 240 ],
+      "tab_background_text": [ 129, 142, 248 ],
+      "tab_background_text_inactive": [ 172, 230, 240 ],
+      "tab_text": [ 172, 230, 240 ],
+      "toolbar": [ 10, 0, 31 ],
+      "toolbar_button_icon": [ 172, 230, 240 ],
+      "toolbar_text": [ 172, 230, 240 ]
+    }
+  }
+}
